@@ -920,6 +920,30 @@ Et si on décide de changer de méthode plus tard, cela n'affectera pas notre sc
 
 
 
+À partir d’ici, le cours pourrait facilement évoluer vers un cours sur les interfaces **UI 2D** de Unity3D.
+![image](https://github.com/user-attachments/assets/2da0c0ef-83d4-4539-93fb-0b7a459725e7)
+
+Mais ce que nous voulons faire, c’est plutôt utiliser **nos mains, la voix, nos pieds** et la **XR**.
+Nous allons donc nous orienter davantage vers le **Input Action System** de Unity par la suite.
+
+---
+
+Avant d’explorer les entrées disponibles et les builds Android, il nous manque encore quelque chose...
+Quand vous testez votre code sur votre propre ordinateur, vous devez à chaque fois lancer le code, puis revenir manuellement sur la fenêtre cible…
+Pas très pratique.
+
+Comment pourrait-on envoyer directement une fausse touche, comme `Enter`, `Backspace` ou `Ctrl+V` ?
+
+C’est possible, à condition de connaître le nom de l’application cible et que celle-ci utilise les codes spécifiques de Windows.
+Mais attention : cela ne fonctionnera pas avec toutes les applications.
+
+Explorons donc **`ctypes`**.
+
+
+
+
+
+
 
 
 ==============

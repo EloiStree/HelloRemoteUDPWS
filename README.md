@@ -517,9 +517,263 @@ Bon, c’est bien beau Python, mais nous, ce qu’on veut, c’est faire du C# s
 Alors, comment fait-on un client en Python ?
 
 
+Essayons de faire dancer notre personnage sur Wow
+(Lancer votre serveur que l on creer plus haut et allons dans Unity3D.)
+
+Creons un petit MonoBehaviour
+
+Comme on peut directement en faire une boite a outils.
+Creons un dossier nommer Runtime
+Et un assembly `be.elab.helloudpws`
+(Utiliser votre nom our alias au lieu de elab.)
+![image](https://github.com/user-attachments/assets/d27e49f0-dd2d-4fdc-83fd-dacee4fc3990)
+
+En court, L assembly permet d isoler le code du reste du projet et du code des autres.
+
+Maintenant creeons un script pour Unity que vous pouvez deposer sur un point vide.
+
+Sont but est de pouvoir envoyer des entiers sur un ordinateur cible et plusieurs applications
+
 ``` cs
-// Je suis ici
+using System;
+using System.Text;
+using UnityEngine;
+
+// On se fait un petit espace a nous pour stocker nos codes isole du reste
+namespace Eloi.HelloUDPWS {
+
+    // On crees un petit block de code pour faire une boite a outils
+    // Une classe ne dois bien faire qu une seule chose
+    // Comme on est dans Unity on herite de MonoBehaviour
+    public class HelloUdpMono_SendIntegerAsUDP : MonoBehaviour
+    {
+        [Tooltip("Address a qui envoyer les messages UDP 127.0.0.1 pour votre machine")]
+        [SerializeField] // Pour que le designer puisse changer l adresse 
+        private string m_addressIpOfTarget = "127.0.0.1";
+
+        [Tooltip("Port a qui envoyer les messages UDP 7005 par defaut")]
+        [SerializeField] // Pour que le designer puisse changer le port
+        private int[] m_portsOfTarget = new int[] { 7005,7006,7007 };
+
+        /// <summary>
+        ///  Ce code enverra le message sous format de bytes en UDP a la cible du script
+        /// </summary>
+        /// <param name="bytesArrayToPush"></param>
+        public void PushBytesToTarget(byte[] bytesArrayToPush)
+        {
+            using (var udpClient = new System.Net.Sockets.UdpClient())
+            {
+                foreach (int port in m_portsOfTarget)
+                {
+                    udpClient.Send(bytesArrayToPush, bytesArrayToPush.Length, m_addressIpOfTarget, port);
+                }
+            }
+        }
+
+        // Permettons au developpeur d envoyer une entier dans le format little endian
+        // Little Endian est la valeur par defaut pour C# BitConverter
+        public void PushIntegerInLittleEndian(int value)
+        {
+            byte[] bytesArrayToPush = BitConverter.GetBytes(value);
+            PushBytesToTarget(bytesArrayToPush);
+        }
+
+        // Permettons d envoyer un text en format UTF8
+        public void PushIntegerFromIntParse(string integerToParse)
+        {
+            if (int.TryParse(integerToParse, out int value))
+            {
+                PushIntegerInLittleEndian(value);
+            }
+        }
+
+        // Permettons d envoyer un text en format UTF8
+        public void PushTextInUTF8(string textUTF8)
+        {
+            byte[] bytesArrayToPush = Encoding.UTF8.GetBytes(textUTF8);
+            PushBytesToTarget(bytesArrayToPush);
+        }
+    }
+}
+
+
 ```
+
+
+Maintenant que vous pouvez envoyer des bytes a un autre ordinateur depuis Unity 😁.
+Ils nous faut preparer un tableau de text correspondant a des entiers
+
+Histoire de proposer une liste d action possible
+
+``` py
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
+
+// On se fait un petit espace a nous pour stocker nos codes isole du reste
+namespace Eloi.HelloUDPWS {
+    // Une classe un role, creons en une qui recoit un text et le diffuse en entier
+    public class HelloUdpMono_TextToInteger : MonoBehaviour
+    {
+        // Il nous faut donc une class qui represent un lien en entre un texte et un entier
+        // Comme c est propre a notre situation
+        // Nous allons faire une classe interne (nested class)
+
+        [System.Serializable]
+        public class TextToInteger
+        {
+            // Le text a donner
+            [Tooltip("Alias to give to trigger the integer value")]
+            public string m_text;
+            // Entier correspondant
+            [Tooltip("Integer value to send when the text is found")]
+            public int m_integer;
+
+            // Creons deux trois constructeurs pour avoir plus facile
+            public TextToInteger(int integer, string text)
+            {
+                m_integer = integer;
+                m_text = text;
+            }
+            public TextToInteger(string text, int integer)
+            {
+                m_integer = integer;
+                m_text = text;
+            }
+            public TextToInteger()
+            {
+                m_integer = 0;
+                m_text = "";
+            }
+        }
+        // Il nous faut donc stocker une liste que le designeur pourra modifier
+        public List<TextToInteger> m_listTextToInteger = new List<TextToInteger>();
+        // Et il nous faut une evenement dont le designeur pourra s abonner pour y reagir
+        public UnityEvent<int> m_onEventAsIntegerFound = new UnityEvent<int>();
+
+        // Donnons quelques valeurs par defaut dans Unity quand on depose le script
+        private void Reset()
+        {
+            m_listTextToInteger = new List<TextToInteger>();
+            m_listTextToInteger.Add(new TextToInteger("Dancer", 8001));
+            m_listTextToInteger.Add(new TextToInteger("Bark", 8002));
+            m_listTextToInteger.Add(new TextToInteger("Applaud", 8003));
+            m_listTextToInteger.Add(new TextToInteger("Highfive", 8004));
+            m_listTextToInteger.Add(new TextToInteger("Hug", 8005));
+            m_listTextToInteger.Add(new TextToInteger("42", 42));
+            m_listTextToInteger.Add(new TextToInteger("2501", 2501));
+            m_listTextToInteger.Add(new TextToInteger("314", 314));
+        }
+
+
+        // Et offrons un petit menu contextuel pour envoyer un message.
+        // Pour tester le code par default
+        [ContextMenu("Push Dancer")]
+        public void PushDancer()
+        {
+            PushTextToInteger("Dancer");
+        }
+        [ContextMenu("Push Bark")]
+        public void PushBark()
+        {
+            PushTextToInteger("Bark");
+        }
+        
+        // Il faut donc fournir au integerateur et developpeur
+        // Une petit methode pour pousser un texte a envoyer et traduire en entier
+        public void PushTextToInteger(string text)
+        {
+            if (string.IsNullOrWhiteSpace(text))
+                return;
+
+            foreach (TextToInteger textToInteger in m_listTextToInteger)
+            {
+                if (textToInteger != null && textToInteger.m_text != null && textToInteger.m_text.Length > 0)
+                {
+                    if (textToInteger.m_text == text)
+                    {
+                        m_onEventAsIntegerFound?.Invoke(textToInteger.m_integer);
+                        return;
+                    }
+                }
+            }
+        }
+
+        // Il est possible que un des developpeurs de l equipe veut savoir si le texte est bien dans la liste
+        public bool HasText(string text)
+        {
+            GetTextFromInteger(text, out bool found, out int _);
+            return found;
+        }
+        // Et qu il souhaite plus de details
+        public void GetTextFromInteger(string text, out bool found, out int integerFound)
+        {
+
+            found = false;
+            integerFound = 0;
+            if (string.IsNullOrWhiteSpace(text))
+                return;
+            foreach (TextToInteger textToInteger in m_listTextToInteger)
+            {
+                if (textToInteger != null && textToInteger.m_text != null && textToInteger.m_text.Length > 0)
+                {
+                    if (textToInteger.m_text == text)
+                    {
+                        integerFound = textToInteger.m_integer;
+                        found = true;
+                        return;
+                    }
+                }
+            }
+        }
+
+
+        // Permettons au developpeur de rajouter un texte lier a un entier pendant que le jeu tourne
+        public void AddToListOfText(string textAlias, int integerValue)
+        {
+            if (string.IsNullOrWhiteSpace(textAlias))
+                return;
+            foreach (TextToInteger textToInteger in m_listTextToInteger)
+            {
+                if (textToInteger != null && textToInteger.m_text != null && textToInteger.m_text.Length > 0)
+                {
+                    if (textToInteger.m_text == textAlias)
+                    {
+                        textToInteger.m_integer = integerValue;
+                        return;
+                    }
+                }
+            }
+            m_listTextToInteger.Add(new TextToInteger(integerValue, textAlias));
+        }
+
+        // Permettons au developpeur de retirer des textes de la liste
+        public void RemoveText(string textAlias)
+        {
+            if (string.IsNullOrWhiteSpace(textAlias))
+                return;
+            foreach (TextToInteger textToInteger in m_listTextToInteger)
+            {
+                if (textToInteger != null && textToInteger.m_text != null && textToInteger.m_text.Length > 0)
+                {
+                    if (textToInteger.m_text == textAlias)
+                    {
+                        m_listTextToInteger.Remove(textToInteger);
+                        return;
+                    }
+                }
+            }
+        }
+    }
+}
+
+```
+
+
+
+
+
+![image](https://github.com/user-attachments/assets/2fa2fdc2-5f88-43d0-9ed9-e46607bd9219)
 
 
 

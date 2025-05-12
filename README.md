@@ -940,6 +940,75 @@ Mais attention : cela ne fonctionnera pas avec toutes les applications.
 Explorons donc **`ctypes`**.
 
 
+``` py
+# Essayons plutôt d'envoyer le Ctrl+V avec ctypes
+import ctypes
+import win32gui
+import time  # Ajout manquant pour utiliser time.sleep
+
+boo_use_ctypes_instead_of_pyautogui = True  # Corrigé "cytpes"
+
+# Définissons un port sur l'ordinateur pour écouter les messages UDP
+int_port_listen = 7005
+ipv4_mask = "0.0.0.0"
+
+# Définissons une touche à utiliser pour ouvrir le chat dans World of Warcraft
+string_key_for_wow_chat = "enter"
+hexadecimal_key_for_wow_chat = 0x0D
+windows_to_target = "World of Warcraft"
+
+# Utilisé pour envoyer des événements de pression ou de relâchement de touche
+WM_KEYDOWN = 0x0100
+WM_KEYUP = 0x0101
+
+# Définir les codes de touches virtuelles nécessaires
+# https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
+VK_CONTROL = 0x11
+VK_V = 0x56
+VK_ENTER = 0x0D
+VK_BACKSPACE = 0x08
+
+# Stockons les handles des fenêtres à cibler 
+target_windows = []
+
+# Fonction pour obtenir les handles des fenêtres par le titre donné
+def get_windows_by_title(title):
+    windows = []
+    win32gui.EnumWindows(lambda hwnd, _: windows.append((hwnd, win32gui.GetWindowText(hwnd))), None)
+    return [hwnd for hwnd, window_title in windows if title.lower() in window_title.lower()]
+
+# Obtenir les handles des fenêtres cibles au démarrage du script
+target_windows = get_windows_by_title(windows_to_target)
+
+# Permet de simuler la pression d'une touche pour une fenêtre spécifique
+def press_key_hwnd(hwnd, key):
+    ctypes.windll.user32.PostMessageW(hwnd, WM_KEYDOWN, key, 0)
+
+# Permet de simuler la libération d'une touche pour une fenêtre spécifique                                      
+def release_key_hwnd(hwnd, key):
+    ctypes.windll.user32.PostMessageW(hwnd, WM_KEYUP, key, 0)
+
+# Permet de simuler la pression et la libération d'une touche pour une fenêtre spécifique
+def press_and_release_key_hwnd(hwnd, key):
+    press_key_hwnd(hwnd, key)
+    time.sleep(0.1)  # Ajustez le délai si nécessaire
+    release_key_hwnd(hwnd, key)
+
+# Permet de simuler la pression d'une touche pour toutes les fenêtres stockées basées sur le titre
+def send_key_press(key):
+    for hwnd_main in target_windows:
+        if hwnd_main == 0:
+            return
+        press_key_hwnd(hwnd_main, key)
+
+# Permet de simuler la libération d'une touche pour toutes les fenêtres stockées basées sur le titre
+def send_key_release(key):
+    for hwnd_main in target_windows:
+        if hwnd_main == 0:
+            return
+        release_key_hwnd(hwnd_main, key)
+
+```
 
 
 

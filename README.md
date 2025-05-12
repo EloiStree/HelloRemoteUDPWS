@@ -789,9 +789,13 @@ Manifique 😁 !!!
 -----------
 
 Attendez, ca veut dire que vous pouvez creer un steam deck de 40-200 euro avec un vieux telephone ?
-![image](https://github.com/user-attachments/assets/4b847034-bc79-4880-a20a-566e5ba7c46c)
+[![image](https://github.com/user-attachments/assets/4b847034-bc79-4880-a20a-566e5ba7c46c)](https://www.thomann.de/be/elgato_stream_deck_xl.htm?glp=1&gad_source=1&gad_campaignid=1565224537&gclid=CjwKCAjwuIbBBhBvEiwAsNypvYvDAsJiQjnh7x3YXAPnbss0C9hYy5uaDXBd2ZVdOZMiI0wqW-5OgBoCvs8QAvD_BwE)
 
-Essayons.
+[![image](https://github.com/user-attachments/assets/c80c6e22-66d7-4276-8e1f-ba8c9250a5d8)](https://youtu.be/GZQpInN1XUo?t=658)
+
+> OUI !!!
+Essayons:  `⌛+☕+🍕= 🪄🔮` .
+
 
 ![image](https://github.com/user-attachments/assets/96ea8419-430f-4940-9f4b-138de95d9951)
 ![image](https://github.com/user-attachments/assets/970ffaa8-0bb7-49ea-8a1e-de96ce8b31a9)

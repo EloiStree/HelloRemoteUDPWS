@@ -512,27 +512,27 @@ while True:
 ![image](https://github.com/user-attachments/assets/5d586b9c-faf8-45e3-9f2b-3f80a5213f68)
 
 
+
 Bon, c’est bien beau Python, mais nous, ce qu’on veut, c’est faire du C# sous Unity3D pour contrôler notre maison avec du code.
 
 Alors, comment fait-on un client en Python ?
 
+Essayons de faire danser notre personnage dans WoW.
+(Lancez le serveur que nous avons créé plus haut, puis ouvrez Unity3D.)
 
-Essayons de faire dancer notre personnage sur Wow
-(Lancer votre serveur que l on creer plus haut et allons dans Unity3D.)
+Créons un petit `MonoBehaviour`.
 
-Creons un petit MonoBehaviour
+Comme on peut directement en faire une boîte à outils, créons un dossier nommé **Runtime**
+et un assembly nommé `be.votreNom.helloudpws`.
+(Utilisez votre nom ou alias à la place de `votreNom`.)
 
-Comme on peut directement en faire une boite a outils.
-Creons un dossier nommer Runtime
-Et un assembly `be.elab.helloudpws`
-(Utiliser votre nom our alias au lieu de elab.)
 ![image](https://github.com/user-attachments/assets/d27e49f0-dd2d-4fdc-83fd-dacee4fc3990)
 
-En court, L assembly permet d isoler le code du reste du projet et du code des autres.
+En bref, l’assembly permet d’isoler le code du reste du projet, ainsi que du code des autres.
 
-Maintenant creeons un script pour Unity que vous pouvez deposer sur un point vide.
+Maintenant, créons un script pour Unity que vous pouvez déposer sur un objet vide.
 
-Sont but est de pouvoir envoyer des entiers sur un ordinateur cible et plusieurs applications
+Son but est de pouvoir envoyer des entiers vers un ordinateur cible ou plusieurs applications.
 
 ``` cs
 using System;
@@ -600,10 +600,12 @@ namespace Eloi.HelloUDPWS {
 ```
 
 
-Maintenant que vous pouvez envoyer des bytes a un autre ordinateur depuis Unity 😁.
-Ils nous faut preparer un tableau de text correspondant a des entiers
+Maintenant que vous pouvez envoyer des bytes à un autre ordinateur depuis Unity 😁,
+il nous faut préparer un tableau de textes correspondant à des entiers.
 
-Histoire de proposer une liste d action possible
+Histoire de proposer une liste d’actions possibles.
+On le fait en deux scripts, car la règle d’or en programmation orientée objet est de séparer le code en petites boîtes à outils.
+
 
 ``` py
 using System.Collections.Generic;
@@ -769,12 +771,152 @@ namespace Eloi.HelloUDPWS {
 
 ```
 
-
-
-
-
 ![image](https://github.com/user-attachments/assets/2fa2fdc2-5f88-43d0-9ed9-e46607bd9219)
 
 
 
+Essayons ces deux classes:
+![image](https://github.com/user-attachments/assets/2328758f-e44f-424d-a7ca-3ac0ec09a28e)
+Changeons le UnityEvent pour relayer en Runtime et Editor vers `SendIntegerAsUDP`
+![image](https://github.com/user-attachments/assets/71bf9e76-4ea9-4f8e-8169-6f3bd3a0cf30)
 
+Et utiliser le menu contextuel pour declancher unr Bark ou un Dancer
+![image](https://github.com/user-attachments/assets/bf012be7-edba-459c-a396-5d9f379f7da5)
+Si votre server python de plus tot est allumer vous devrier avec un message dans le clipboard et un coller qui c est declanche ;)
+
+Manifique 😁 !!!
+
+-----------
+
+Attendez, ca veut dire que vous pouvez creer un steam deck de 40-200 euro avec un vieux telephone ?
+![image](https://github.com/user-attachments/assets/4b847034-bc79-4880-a20a-566e5ba7c46c)
+
+Essayons.
+
+![image](https://github.com/user-attachments/assets/96ea8419-430f-4940-9f4b-138de95d9951)
+![image](https://github.com/user-attachments/assets/970ffaa8-0bb7-49ea-8a1e-de96ce8b31a9)
+
+Mais pour simplifier les transmissions, il nous faudrait un code qui permette d’envoyer un entier de manière statique via C#, et que le code que nous avons déjà développé puisse s’y abonner.
+Cela nous éviterait d’avoir à dupliquer ce code sur tous nos objets.
+
+Nous allons donc créer une classe statique qui permet d’envoyer des entiers ou des chaînes de caractères à travers notre application.
+
+
+
+``` cs
+
+using UnityEngine;
+
+// On se fait un petit espace a nous pour stocker nos codes isole du reste
+namespace Eloi.HelloUDPWS {
+    // Creaons un script qui permet d envoyer un entier ou un group de mots en text
+    public class HelloUdpMono_StaticTextAndIntegerPusher : MonoBehaviour
+    {
+        // Permettons nous de debugger si il y a un probleme en affichant le dernier entier
+        public int m_lastPushInteger;
+        // Ainsi aue le dernier text
+        public string m_lastPushText;
+
+        // Voici la methode que le developpeur et designeur pourra utiliser pour envoyer une command en entier
+        public void PushInteger(int value)
+        {
+            m_lastPushInteger = value;
+            // On demande a la class static qui sait qui est en charge de relayer le message de pousser l entier
+            HelloUdpMono_StaticTextAndIntegerRelay.GetInstance()?.PushIntegerToTarget(value);
+        }
+        // Voici la methode que le developpeur et designeur pourra utiliser pour envoyer une command en text
+        public void PushText(string text)
+        {
+            m_lastPushText = text;
+            // On demande a la class static qui sait qui est en charge de relayer le message de pousser l entier
+            HelloUdpMono_StaticTextAndIntegerRelay.GetInstance()?.PushTextToWordInterpretor(text);
+        }
+    }
+}
+```
+
+On reçoit les données, puis on les transmet à notre code qui sait comment les relayer.
+Et si, plus tard, on décide de changer de méthode de transmission, il ne sera pas nécessaire de modifier toute l’application — il suffira simplement d’ajuster les UnityEvent utilisés ici.
+
+
+``` cs 
+using System;
+using UnityEngine;
+using UnityEngine.Events;
+
+// On se fait un petit espace a nous pour stocker nos codes isole du reste
+namespace Eloi.HelloUDPWS {
+    // Maintenant, il nous faut une classe qui va relayer les messages a un code qui nous est inconnu dans le future
+    public class HelloUdpMono_StaticTextAndIntegerRelay : MonoBehaviour
+    {
+        // On va faire un singleton pour que le code soit accessible de partout mais avec un seul point script par scene
+        private static HelloUdpMono_StaticTextAndIntegerRelay m_scriptInScene;
+        // On veut pas le laisser etre modifier donc on le protege avec un private
+        public static HelloUdpMono_StaticTextAndIntegerRelay GetInstance()
+        {
+            return m_scriptInScene;
+        }
+
+        // Les messages recu seront transmis a un autre code deposer ici par le designeur ou developpeur
+        public UnityEvent<int> m_onIntegerToPushAtTarget = new UnityEvent<int>();
+        public UnityEvent<string> m_onWordToInterpret = new UnityEvent<string>();
+
+        // Une fois que notre script apparait dans la scene on le stocke dans la variable static
+        private void OnEnable()
+        {
+            if (m_scriptInScene == null)
+            {
+                m_scriptInScene = this;
+            }
+            else
+            {
+                Debug.LogWarning("There is already a HelloUdpMono_StaticTextAndIntegerRelay in the scene", this.gameObject);
+
+            }
+        }
+        // Quand le script disparait de la scene on le retire de la variable static
+        private void OnDisable()
+        {
+            if (m_scriptInScene == this)
+            {
+                m_scriptInScene = null;
+            }
+        }
+
+        // Ajoutons un methode pour permettre de pousser la valeur entiere vers la cible exterieure
+        public void PushIntegerToTarget(int value)
+        {
+            m_onIntegerToPushAtTarget?.Invoke(value);
+        }
+
+        // Ajouter une methode pour pousser un text qui sera decouper en groupe de mots
+        public void PushTextToWordInterpretor(string groupeDeMots)
+        {
+            string[] words = groupeDeMots.Split(new char[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+            foreach (string word in words)
+            {
+                if (string.IsNullOrWhiteSpace(word))
+                    continue;
+                m_onWordToInterpret?.Invoke(word);
+            }
+
+        }
+    }
+}
+```
+
+
+Pour envoyer un message, il nous suffit maintenant de déposer un petit script **statique** et d’utiliser soit un `UnityEvent` de Unity, soit un morceau de code personnalisé :
+![image](https://github.com/user-attachments/assets/82b8ffff-1b15-496f-b88b-6abbff63183a)
+
+Ensuite, il suffit de connecter la réception de ces messages à notre `Broadcaster UDP` :
+![image](https://github.com/user-attachments/assets/9136b604-ef69-45b8-bf53-ab33de4f2dfe)
+
+Et si on décide de changer de méthode plus tard, cela n'affectera pas notre scène 😜
+
+
+
+
+
+==============
+Note: https://github.com/EloiStree/HelloInput/issues/28

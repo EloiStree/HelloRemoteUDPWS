@@ -1014,11 +1014,11 @@ def send_key_release(key):
 On est d'accord, ça va vite faire beaucoup de lignes de code.
 
 Je vous invite donc à vous inspirer du code suivant pour créer le vôtre :
-`PHelloServerPostMessageClipboard.py`
+`HelloServerPostMessageClipboard.py`
 
 De mon côté, j’utilise un code pour mes projets qui s’appelle **ScratchToWarcraft**.
 Pour ne pas réinventer la roue, je vais l’utiliser :
-[https://github.com/EloiStree/2024\_08\_29\_ScratchToWarcraft](https://github.com/EloiStree/2024_08_29_ScratchToWarcraft)
+[https://github.com/EloiStree/2024_08_29_ScratchToWarcraft](https://github.com/EloiStree/2024_08_29_ScratchToWarcraft)
 
 Je vous propose plusieurs zones de test sur lesquelles `PostMessage` de Ctypes fonctionne :
 
@@ -1066,8 +1066,45 @@ start "" ""
 # Tada
 ```
 
+Avant d utiliser SCRCPY, je vais vous donner deux boites a outils pour plus tard
+- Une boite a outils de fichier bat pour interagir avec scrcpy
+  - https://github.com/EloiStree/2024_05_23_SCRCPYBatFiles
+- Une boite a outils pour installer un jeu android sur plusieurs telephone et Quest3 en meme temps.
+  - https://github.com/EloiStree/2025_01_12_BuildAndRunApkBroadcast.git
+
+``` bash
+git clone https://github.com/EloiStree/2024_05_23_SCRCPYBatFiles.git  BatFiles
+git clone https://github.com/EloiStree/2025_01_12_BuildAndRunApkBroadcast.git BroadcastAndRun
+# A cloner a coter de  `adb.exe` et `scrcpy.exe`
+```
+
+Comme nous allons travaillez avec Android, il va nous falloir donner plus de pouvoir a vos telephone Android, ou Quest3.
+Cela est possible en les passants Administrateur.
+- [Sur telephone Android =>](https://www.youtube.com/results?search_query=passer+en+mode+developer+android+sur+telephone)
+- [Sur Quest 3 =>](https://www.youtube.com/results?search_query=passer+en+mode+developer+android+sur+quest3) 
+
+Comme ca change avec le temps et le temps, je laisse soint au Youtuber professionnel de vous montrer la dernier maniere de faire pour passer developper.
+Je me fais une petit pizza pendant ce temps la 🍕🤗...
+
+-------------------------
+
+Si votre telephone est bien maintenant developpeur :), on va pouvoir s amuser.
+
+
+Essayons deja de faire un Hello World.
+
+
+
+
+
+
+
 
 
 
 ==============
-Note: https://github.com/EloiStree/HelloInput/issues/28
+
+- Note: https://github.com/EloiStree/HelloInput/issues/28
+- Meross: https://github.com/EloiStree/2024_12_13_IntegerToMerossFromPython/tree/main
+- Govee: https://github.com/EloiStree/2025_03_19_IntegerToGoveeFromPython
+  - https://github.com/EloiStree/2025_01_26_XboxAndKeyboardOnPiToInteger

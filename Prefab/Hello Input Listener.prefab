@@ -1,0 +1,2024 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &52070303760163026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8528920527563219820}
+  - component: {fileID: 6765418422106742123}
+  - component: {fileID: 6792000131479239301}
+  m_Layer: 0
+  m_Name: Arrow As Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8528920527563219820
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52070303760163026}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1064471041852560789}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6765418422106742123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52070303760163026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13287ee9d22fbe945b56c9a1752a906c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inputAction: {fileID: 8738896554899726780, guid: 32682901784a2414c8ad82fccda6593c, type: 3}
+  m_onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6792000131479239301}
+        m_TargetAssemblyTypeName: Eloi.Tick.TickMono_AxisValueToBoolEvent, be.elab.tickcollection.Runtime
+        m_MethodName: PushInAxisValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  m_axisValue: 0
+--- !u!114 &6792000131479239301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52070303760163026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8309041cfecf49488991600ea8e7654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_events:
+    m_onMinEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onMaxEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onDeathZoneEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onMinExit:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onMaxExit:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onDeathZoneExit:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onMinInChanged:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7388458560217018044}
+          m_TargetAssemblyTypeName: HelloUdpMono_WarcraftMove, be.elab.helloudpws.Runtime
+          m_MethodName: SetPitchDown
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    m_onMaxInChanged:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7388458560217018044}
+          m_TargetAssemblyTypeName: HelloUdpMono_WarcraftMove, be.elab.helloudpws.Runtime
+          m_MethodName: SetPitchUp
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    m_onDeathZoneInChanged:
+      m_PersistentCalls:
+        m_Calls: []
+  m_borderRange: 0.8
+  m_deathZone: 0.1
+  m_axisValue: 0
+  m_isMin: 0
+  m_isMax: 0
+  m_isInDeathZone: 0
+--- !u!1 &264521325106827696
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2163890451337221102}
+  - component: {fileID: 5297143549832113391}
+  m_Layer: 0
+  m_Name: Axis Horizontal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2163890451337221102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264521325106827696}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8957252465810718070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5297143549832113391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264521325106827696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8309041cfecf49488991600ea8e7654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_events:
+    m_onMinEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onMaxEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onDeathZoneEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onMinExit:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onMaxExit:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onDeathZoneExit:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onMinInChanged:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7388458560217018044}
+          m_TargetAssemblyTypeName: HelloUdpMono_WarcraftMove, be.elab.helloudpws.Runtime
+          m_MethodName: SetRotateLeft
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    m_onMaxInChanged:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7388458560217018044}
+          m_TargetAssemblyTypeName: HelloUdpMono_WarcraftMove, be.elab.helloudpws.Runtime
+          m_MethodName: SetRotateRight
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    m_onDeathZoneInChanged:
+      m_PersistentCalls:
+        m_Calls: []
+  m_borderRange: 0.5
+  m_deathZone: 0.1
+  m_axisValue: 0
+  m_isMin: 0
+  m_isMax: 0
+  m_isInDeathZone: 0
+--- !u!1 &993293839965239058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4090690315232183515}
+  - component: {fileID: 6850632635517367362}
+  - component: {fileID: 7388458560217018044}
+  - component: {fileID: 7062409178304501852}
+  - component: {fileID: 6663306771862698227}
+  m_Layer: 0
+  m_Name: Warcraft Push
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4090690315232183515
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993293839965239058}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2469039981238910291}
+  m_Father: {fileID: 1064471041852560789}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6850632635517367362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993293839965239058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b89815eae1254d64a8ffa70c492a28b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_lastPushInteger: 1088
+  m_lastPushText: 
+--- !u!114 &7388458560217018044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993293839965239058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c8f53793f01a6840b347e0bb8e491c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onIntegerActionPushed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6850632635517367362}
+        m_TargetAssemblyTypeName: Eloi.HelloUDPWS.HelloUdpMono_StaticTextAndIntegerPusher,
+          be.elab.helloudpws.Runtime
+        m_MethodName: PushInteger
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  m_lastPushed: 2088
+  m_strafeLeft: 1081
+  m_strafeRight: 1069
+  m_moveForward: 1038
+  m_moveBackward: 1040
+  m_moveUp: 1032
+  m_moveDown: 1088
+  m_rotateLeft: 1037
+  m_rotateRight: 1039
+  m_attack1: 1049
+  m_attack2: 1050
+  m_tabulation: 1009
+  m_interaction: 1070
+  m_flyKey: 1048
+  m_pitchUp: 1033
+  m_pitchDown: 1034
+--- !u!114 &7062409178304501852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993293839965239058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978ff5ad8aa70ad49b94b1f004cf1530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onIntegerActionPushed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6850632635517367362}
+        m_TargetAssemblyTypeName: Eloi.HelloUDPWS.HelloUdpMono_StaticTextAndIntegerPusher,
+          be.elab.helloudpws.Runtime
+        m_MethodName: PushInteger
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_lastPushed: 0
+  m_control: 1017
+  m_keyV: 1086
+  m_backspace: 1008
+  m_openChatKey: 1013
+  m_closeChatKey: 1013
+  m_timeBeforeKeys: 0.05
+  m_timeBeforeChatOpen: 0.3
+  m_timeToPast: 0.1
+--- !u!114 &6663306771862698227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993293839965239058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecd32a86a0761e548b280b69a39a1c87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_charToNumpad:
+  - m_charAsString: ~
+    m_char: 126
+    m_numpadCode: 126
+  - m_charAsString: '!'
+    m_char: 33
+    m_numpadCode: 33
+  - m_charAsString: '@'
+    m_char: 64
+    m_numpadCode: 64
+  - m_charAsString: '#'
+    m_char: 35
+    m_numpadCode: 35
+  - m_charAsString: $
+    m_char: 36
+    m_numpadCode: 36
+  - m_charAsString: '%'
+    m_char: 37
+    m_numpadCode: 37
+  - m_charAsString: ^
+    m_char: 94
+    m_numpadCode: 94
+  - m_charAsString: '&'
+    m_char: 38
+    m_numpadCode: 38
+  - m_charAsString: '*'
+    m_char: 42
+    m_numpadCode: 42
+  - m_charAsString: (
+    m_char: 40
+    m_numpadCode: 40
+  - m_charAsString: )
+    m_char: 41
+    m_numpadCode: 41
+  - m_charAsString: _
+    m_char: 95
+    m_numpadCode: 95
+  - m_charAsString: '-'
+    m_char: 45
+    m_numpadCode: 45
+  - m_charAsString: =
+    m_char: 61
+    m_numpadCode: 61
+  - m_charAsString: +
+    m_char: 43
+    m_numpadCode: 43
+  - m_charAsString: '['
+    m_char: 91
+    m_numpadCode: 91
+  - m_charAsString: ']'
+    m_char: 93
+    m_numpadCode: 93
+  - m_charAsString: '{'
+    m_char: 123
+    m_numpadCode: 123
+  - m_charAsString: '}'
+    m_char: 125
+    m_numpadCode: 125
+  - m_charAsString: ;
+    m_char: 59
+    m_numpadCode: 59
+  - m_charAsString: ':'
+    m_char: 58
+    m_numpadCode: 58
+  - m_charAsString: ''''
+    m_char: 39
+    m_numpadCode: 39
+  - m_charAsString: '"'
+    m_char: 34
+    m_numpadCode: 34
+  - m_charAsString: ','
+    m_char: 44
+    m_numpadCode: 44
+  - m_charAsString: <
+    m_char: 60
+    m_numpadCode: 60
+  - m_charAsString: .
+    m_char: 46
+    m_numpadCode: 46
+  - m_charAsString: '>'
+    m_char: 62
+    m_numpadCode: 62
+  - m_charAsString: '?'
+    m_char: 63
+    m_numpadCode: 63
+  - m_charAsString: /
+    m_char: 47
+    m_numpadCode: 47
+  - m_charAsString: \
+    m_char: 92
+    m_numpadCode: 92
+  - m_charAsString: '|'
+    m_char: 124
+    m_numpadCode: 124
+  - m_charAsString: '`'
+    m_char: 96
+    m_numpadCode: 96
+  - m_charAsString: ' '
+    m_char: 32
+    m_numpadCode: 32
+  m_timeForAltToBePressed: 0.4
+  m_timeBetzeenCharPress: 0.2
+  m_timeBeforeReleaseAlt: 0.2
+  m_timeAfterReleaseAlt: 0.2
+  m_timeBetweenPresseNumpad: 0.05
+  m_onIntegerActionPushed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6850632635517367362}
+        m_TargetAssemblyTypeName: Eloi.HelloUDPWS.HelloUdpMono_StaticTextAndIntegerPusher,
+          be.elab.helloudpws.Runtime
+        m_MethodName: PushInteger
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_lastPushed: 0
+--- !u!1 &1034386899927793858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8957252465810718070}
+  - component: {fileID: 2714309708667173803}
+  m_Layer: 0
+  m_Name: Joystick Left
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8957252465810718070
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034386899927793858}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2163890451337221102}
+  - {fileID: 6412700201989520127}
+  m_Father: {fileID: 1064471041852560789}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2714309708667173803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034386899927793858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0513fc6db4de52419f64a02ca8cf4db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inputAction: {fileID: -2960959566283835516, guid: 32682901784a2414c8ad82fccda6593c, type: 3}
+  m_onValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_joystickValue: {x: 0, y: 0}
+  m_onValueChangedX:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5297143549832113391}
+        m_TargetAssemblyTypeName: Eloi.Tick.TickMono_AxisValueToBoolEvent, be.elab.tickcollection.Runtime
+        m_MethodName: PushInAxisValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_onValueChangedY:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7231003948023512278}
+        m_TargetAssemblyTypeName: Eloi.Tick.TickMono_AxisValueToBoolEvent, be.elab.tickcollection.Runtime
+        m_MethodName: PushInAxisValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &1161187248589706634
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5148392611755103064}
+  - component: {fileID: 7593663733120634637}
+  m_Layer: 0
+  m_Name: 42
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5148392611755103064
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161187248589706634}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6290517890795413902}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7593663733120634637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161187248589706634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d7f5557591d20749ad97295920da021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onTick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6017922974680035745}
+        m_TargetAssemblyTypeName: Eloi.HelloUDPWS.HelloUdpMono_StaticTextAndIntegerPusher,
+          be.elab.helloudpws.Runtime
+        m_MethodName: PushInteger
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 42
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &1475654350832186553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8677051866961440856}
+  - component: {fileID: 8341935240113609306}
+  m_Layer: 0
+  m_Name: Axis Vertical (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8677051866961440856
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475654350832186553}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2774173786316641673}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8341935240113609306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475654350832186553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8309041cfecf49488991600ea8e7654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_events:
+    m_onMinEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onMaxEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onDeathZoneEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onMinExit:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onMaxExit:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onDeathZoneExit:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onMinInChanged:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7388458560217018044}
+          m_TargetAssemblyTypeName: HelloUdpMono_WarcraftMove, be.elab.helloudpws.Runtime
+          m_MethodName: SetMoveBackward
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    m_onMaxInChanged:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7388458560217018044}
+          m_TargetAssemblyTypeName: HelloUdpMono_WarcraftMove, be.elab.helloudpws.Runtime
+          m_MethodName: SetMoveForward
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    m_onDeathZoneInChanged:
+      m_PersistentCalls:
+        m_Calls: []
+  m_borderRange: 0.5
+  m_deathZone: 0.1
+  m_axisValue: 0
+  m_isMin: 0
+  m_isMax: 0
+  m_isInDeathZone: 0
+--- !u!1 &1504453488598852035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1663278905459701737}
+  m_Layer: 0
+  m_Name: OnDisable
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1663278905459701737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504453488598852035}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 101390433995892333}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1545889832988581504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2478348656885100112}
+  - component: {fileID: 5667405543255012378}
+  m_Layer: 0
+  m_Name: Key Button A Space
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2478348656885100112
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545889832988581504}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1064471041852560789}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5667405543255012378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545889832988581504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cc30a5b8c50d0c4299133b4ed553254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inputAction: {fileID: 3710258443500508391, guid: 32682901784a2414c8ad82fccda6593c, type: 3}
+  m_onChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onDown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7388458560217018044}
+        m_TargetAssemblyTypeName: HelloUdpMono_WarcraftMove, be.elab.helloudpws.Runtime
+        m_MethodName: TapInteraction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_onUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7388458560217018044}
+        m_TargetAssemblyTypeName: HelloUdpMono_WarcraftMove, be.elab.helloudpws.Runtime
+        m_MethodName: TapTabulation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_isPressed: 0
+--- !u!1 &1778154290766080752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6412700201989520127}
+  - component: {fileID: 7231003948023512278}
+  m_Layer: 0
+  m_Name: Axis Vertical
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6412700201989520127
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778154290766080752}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8957252465810718070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7231003948023512278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778154290766080752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8309041cfecf49488991600ea8e7654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_events:
+    m_onMinEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onMaxEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onDeathZoneEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onMinExit:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onMaxExit:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onDeathZoneExit:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onMinInChanged:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7388458560217018044}
+          m_TargetAssemblyTypeName: HelloUdpMono_WarcraftMove, be.elab.helloudpws.Runtime
+          m_MethodName: SetMoveDown
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    m_onMaxInChanged:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7388458560217018044}
+          m_TargetAssemblyTypeName: HelloUdpMono_WarcraftMove, be.elab.helloudpws.Runtime
+          m_MethodName: SetMoveUp
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    m_onDeathZoneInChanged:
+      m_PersistentCalls:
+        m_Calls: []
+  m_borderRange: 0.5
+  m_deathZone: 0.1
+  m_axisValue: 0
+  m_isMin: 0
+  m_isMax: 0
+  m_isInDeathZone: 0
+--- !u!1 &2632732480856290111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5974949165042582040}
+  - component: {fileID: 848856110416379886}
+  m_Layer: 0
+  m_Name: Pause Stop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5974949165042582040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2632732480856290111}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 101390433995892333}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &848856110416379886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2632732480856290111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce1f0f5f20fe95c4995f73880e36da2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onTick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &3567841485025819943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6290517890795413902}
+  - component: {fileID: 4868642215596940700}
+  m_Layer: 0
+  m_Name: Relay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6290517890795413902
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3567841485025819943}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1467411279958522210}
+  - {fileID: 3794352772472672548}
+  - {fileID: 1411758735465667938}
+  - {fileID: 5148392611755103064}
+  - {fileID: 5983049266037290640}
+  - {fileID: 8056430365249030738}
+  m_Father: {fileID: 101390433995892333}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4868642215596940700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3567841485025819943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d7f5557591d20749ad97295920da021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onTick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &3701391046277613192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2469039981238910291}
+  - component: {fileID: 6135695190353532526}
+  m_Layer: 0
+  m_Name: Push Char for the test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2469039981238910291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3701391046277613192}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4090690315232183515}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6135695190353532526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3701391046277613192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d7f5557591d20749ad97295920da021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onTick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6663306771862698227}
+        m_TargetAssemblyTypeName: Eloi.HelloUDPWS.HelloUdpMono_QwertyCharWithAltPad,
+          be.elab.helloudpws.Runtime
+        m_MethodName: PushInNumpadCodeWithAltAsGivenText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ~!@#$%^&*()_-=+[]{};:'",<.>/?\|
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &4090050454670450215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5880957310038348630}
+  - component: {fileID: 7117673800983661381}
+  m_Layer: 0
+  m_Name: OnDestroy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5880957310038348630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4090050454670450215}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 101390433995892333}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7117673800983661381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4090050454670450215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40b6b24373afc0b4ea43b2f8ae32c333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onTick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &4202841958151671679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3794352772472672548}
+  - component: {fileID: 7116170836904139708}
+  m_Layer: 0
+  m_Name: 8001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3794352772472672548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4202841958151671679}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6290517890795413902}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7116170836904139708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4202841958151671679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d7f5557591d20749ad97295920da021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onTick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6017922974680035745}
+        m_TargetAssemblyTypeName: Eloi.HelloUDPWS.HelloUdpMono_StaticTextAndIntegerPusher,
+          be.elab.helloudpws.Runtime
+        m_MethodName: PushInteger
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8001
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &4254432807637755884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1411758735465667938}
+  - component: {fileID: 7087292030606212717}
+  m_Layer: 0
+  m_Name: 80085
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1411758735465667938
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4254432807637755884}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6290517890795413902}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7087292030606212717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4254432807637755884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d7f5557591d20749ad97295920da021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onTick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6017922974680035745}
+        m_TargetAssemblyTypeName: Eloi.HelloUDPWS.HelloUdpMono_StaticTextAndIntegerPusher,
+          be.elab.helloudpws.Runtime
+        m_MethodName: PushInteger
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 80085
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &5529582586996319443
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6403602434527694689}
+  - component: {fileID: 3238252973962220509}
+  m_Layer: 0
+  m_Name: Axis Horizontal (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6403602434527694689
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5529582586996319443}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2774173786316641673}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3238252973962220509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5529582586996319443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8309041cfecf49488991600ea8e7654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_events:
+    m_onMinEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onMaxEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onDeathZoneEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onMinExit:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onMaxExit:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onDeathZoneExit:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onMinInChanged:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7388458560217018044}
+          m_TargetAssemblyTypeName: HelloUdpMono_WarcraftMove, be.elab.helloudpws.Runtime
+          m_MethodName: SetStrafeLeft
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    m_onMaxInChanged:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7388458560217018044}
+          m_TargetAssemblyTypeName: HelloUdpMono_WarcraftMove, be.elab.helloudpws.Runtime
+          m_MethodName: SetStrafeRight
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    m_onDeathZoneInChanged:
+      m_PersistentCalls:
+        m_Calls: []
+  m_borderRange: 0.5
+  m_deathZone: 0.1
+  m_axisValue: 0
+  m_isMin: 0
+  m_isMax: 0
+  m_isInDeathZone: 0
+--- !u!1 &5603945933272586759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4406322186973389168}
+  m_Layer: 0
+  m_Name: OnEnable
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4406322186973389168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5603945933272586759}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 101390433995892333}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5823382763464649186
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2774173786316641673}
+  - component: {fileID: 1180739666682876399}
+  m_Layer: 0
+  m_Name: Joystick Right
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2774173786316641673
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5823382763464649186}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6403602434527694689}
+  - {fileID: 8677051866961440856}
+  m_Father: {fileID: 1064471041852560789}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1180739666682876399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5823382763464649186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0513fc6db4de52419f64a02ca8cf4db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inputAction: {fileID: -8786442640849211166, guid: 32682901784a2414c8ad82fccda6593c, type: 3}
+  m_onValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_joystickValue: {x: 0, y: 0}
+  m_onValueChangedX:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3238252973962220509}
+        m_TargetAssemblyTypeName: Eloi.Tick.TickMono_AxisValueToBoolEvent, be.elab.tickcollection.Runtime
+        m_MethodName: PushInAxisValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_onValueChangedY:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8341935240113609306}
+        m_TargetAssemblyTypeName: Eloi.Tick.TickMono_AxisValueToBoolEvent, be.elab.tickcollection.Runtime
+        m_MethodName: PushInAxisValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &6757164509491029407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6881421406615971462}
+  - component: {fileID: 3791490349681489267}
+  m_Layer: 0
+  m_Name: Pause Start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6881421406615971462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6757164509491029407}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 101390433995892333}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3791490349681489267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6757164509491029407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680d60a1f42724c468648722d8530fff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onTick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &7360729712990379648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 101390433995892333}
+  - component: {fileID: 6017922974680035745}
+  m_Layer: 0
+  m_Name: Unity Tick
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &101390433995892333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7360729712990379648}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4566069766195323953}
+  - {fileID: 4406322186973389168}
+  - {fileID: 1663278905459701737}
+  - {fileID: 6290517890795413902}
+  - {fileID: 5880957310038348630}
+  - {fileID: 6881421406615971462}
+  - {fileID: 5974949165042582040}
+  m_Father: {fileID: 1064471041852560789}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6017922974680035745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7360729712990379648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b89815eae1254d64a8ffa70c492a28b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_lastPushInteger: 0
+  m_lastPushText: 
+--- !u!1 &7489288171381479607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4566069766195323953}
+  - component: {fileID: 4365258991103253289}
+  m_Layer: 0
+  m_Name: Awake
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4566069766195323953
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7489288171381479607}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 101390433995892333}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4365258991103253289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7489288171381479607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c99294f323deb442b43e9075c4c3f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onTick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &7545462273580004969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1064471041852560789}
+  m_Layer: 0
+  m_Name: Hello Input Listener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1064471041852560789
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7545462273580004969}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 736.011, y: 0, z: 3840.2847}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4090690315232183515}
+  - {fileID: 2478348656885100112}
+  - {fileID: 6948509171136709621}
+  - {fileID: 8528920527563219820}
+  - {fileID: 8957252465810718070}
+  - {fileID: 2774173786316641673}
+  - {fileID: 101390433995892333}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8257826612769271224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8056430365249030738}
+  - component: {fileID: 4754686081160933542}
+  m_Layer: 0
+  m_Name: 315
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8056430365249030738
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8257826612769271224}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6290517890795413902}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4754686081160933542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8257826612769271224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d7f5557591d20749ad97295920da021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onTick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6017922974680035745}
+        m_TargetAssemblyTypeName: Eloi.HelloUDPWS.HelloUdpMono_StaticTextAndIntegerPusher,
+          be.elab.helloudpws.Runtime
+        m_MethodName: PushInteger
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 315
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &8331004181291427333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1467411279958522210}
+  - component: {fileID: 5707815023454611240}
+  m_Layer: 0
+  m_Name: 8000
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1467411279958522210
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8331004181291427333}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6290517890795413902}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5707815023454611240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8331004181291427333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d7f5557591d20749ad97295920da021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onTick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6017922974680035745}
+        m_TargetAssemblyTypeName: Eloi.HelloUDPWS.HelloUdpMono_StaticTextAndIntegerPusher,
+          be.elab.helloudpws.Runtime
+        m_MethodName: PushInteger
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8008
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &9066271507645526871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5983049266037290640}
+  - component: {fileID: 7790583459792953086}
+  m_Layer: 0
+  m_Name: 2501
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5983049266037290640
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9066271507645526871}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6290517890795413902}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7790583459792953086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9066271507645526871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d7f5557591d20749ad97295920da021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onTick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6017922974680035745}
+        m_TargetAssemblyTypeName: Eloi.HelloUDPWS.HelloUdpMono_StaticTextAndIntegerPusher,
+          be.elab.helloudpws.Runtime
+        m_MethodName: PushInteger
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2501
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &9172957809978491984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6948509171136709621}
+  - component: {fileID: 6365116426663721908}
+  - component: {fileID: 2105334402121987139}
+  m_Layer: 0
+  m_Name: Trigger Left
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6948509171136709621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9172957809978491984}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1064471041852560789}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6365116426663721908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9172957809978491984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13287ee9d22fbe945b56c9a1752a906c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inputAction: {fileID: 3601601948879286774, guid: 32682901784a2414c8ad82fccda6593c, type: 3}
+  m_onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2105334402121987139}
+        m_TargetAssemblyTypeName: Eloi.Tick.TickMono_AxisValueToBoolEvent, be.elab.tickcollection.Runtime
+        m_MethodName: PushInAxisValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  m_axisValue: 0
+--- !u!114 &2105334402121987139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9172957809978491984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8309041cfecf49488991600ea8e7654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_events:
+    m_onMinEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7388458560217018044}
+          m_TargetAssemblyTypeName: HelloUdpMono_WarcraftMove, be.elab.helloudpws.Runtime
+          m_MethodName: TapAttack1
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    m_onMaxEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7388458560217018044}
+          m_TargetAssemblyTypeName: HelloUdpMono_WarcraftMove, be.elab.helloudpws.Runtime
+          m_MethodName: TapAttack2
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    m_onDeathZoneEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onMinExit:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onMaxExit:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onDeathZoneExit:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onMinInChanged:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onMaxInChanged:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onDeathZoneInChanged:
+      m_PersistentCalls:
+        m_Calls: []
+  m_borderRange: 0.8
+  m_deathZone: 0.1
+  m_axisValue: 0
+  m_isMin: 0
+  m_isMax: 0
+  m_isInDeathZone: 0

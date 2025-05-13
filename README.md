@@ -1010,6 +1010,12 @@ def send_key_release(key):
 
 ```
 
+On est d accord ca va vite faire beaucoup de ligne de code.
+Je vous invite donc a utiliser HelloServerPostMessageClipboard.python
+
+
+https://store.steampowered.com/app/366250/METAL_SLUG/?l=french
+
 
 
 

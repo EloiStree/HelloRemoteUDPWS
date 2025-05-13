@@ -775,12 +775,12 @@ namespace Eloi.HelloUDPWS {
 
 
 
-Essayons ces deux classes:
-![image](https://github.com/user-attachments/assets/2328758f-e44f-424d-a7ca-3ac0ec09a28e)
-Changeons le UnityEvent pour relayer en Runtime et Editor vers `SendIntegerAsUDP`
-![image](https://github.com/user-attachments/assets/71bf9e76-4ea9-4f8e-8169-6f3bd3a0cf30)
+Essayons ces deux classes:  
+![image](https://github.com/user-attachments/assets/2328758f-e44f-424d-a7ca-3ac0ec09a28e)  
+Changeons le UnityEvent pour relayer en Runtime et Editor vers `SendIntegerAsUDP`  
+![image](https://github.com/user-attachments/assets/71bf9e76-4ea9-4f8e-8169-6f3bd3a0cf30)  
 
-Et utiliser le menu contextuel pour declancher unr Bark ou un Dancer
+Et utiliser le menu contextuel pour declancher un Bark ou un Dancer
 ![image](https://github.com/user-attachments/assets/bf012be7-edba-459c-a396-5d9f379f7da5)
 Si votre server python de plus tot est allumer vous devrier avec un message dans le clipboard et un coller qui c est declanche ;)
 
@@ -800,7 +800,7 @@ Essayons:  `⌛+☕+🍕= 🪄🔮` .
 ![image](https://github.com/user-attachments/assets/96ea8419-430f-4940-9f4b-138de95d9951)
 ![image](https://github.com/user-attachments/assets/970ffaa8-0bb7-49ea-8a1e-de96ce8b31a9)
 
-Mais pour simplifier les transmissions, il nous faudrait un code qui permette d’envoyer un entier de manière statique via C#, et que le code que nous avons déjà développé puisse s’y abonner.
+Mais pour simplifier les transmissions, il nous faudrait un code qui permette d’envoyer un entier de manière statique via C# dans tout l'application, et que le code que nous avons déjà développé puisse s’y abonner.
 Cela nous éviterait d’avoir à dupliquer ce code sur tous nos objets.
 
 Nous allons donc créer une classe statique qui permet d’envoyer des entiers ou des chaînes de caractères à travers notre application.
@@ -1010,13 +1010,61 @@ def send_key_release(key):
 
 ```
 
-On est d accord ca va vite faire beaucoup de ligne de code.
-Je vous invite donc a utiliser HelloServerPostMessageClipboard.python
+
+On est d'accord, ça va vite faire beaucoup de lignes de code.
+
+Je vous invite donc à vous inspirer du code suivant pour créer le vôtre :
+`PHelloServerPostMessageClipboard.py`
+
+De mon côté, j’utilise un code pour mes projets qui s’appelle **ScratchToWarcraft**.
+Pour ne pas réinventer la roue, je vais l’utiliser :
+[https://github.com/EloiStree/2024\_08\_29\_ScratchToWarcraft](https://github.com/EloiStree/2024_08_29_ScratchToWarcraft)
+
+Je vous propose plusieurs zones de test sur lesquelles `PostMessage` de Ctypes fonctionne :
+
+* [https://hordes.io](https://hordes.io) sur Firefox
+* World of Warcraft : [https://worldofwarcraft.blizzard.com/fr-fr/](https://worldofwarcraft.blizzard.com/fr-fr/)
+* Brawlhalla : [https://www.brawlhalla.com](https://www.brawlhalla.com) sur Steam
+* Votre téléphone avec : [https://github.com/Genymobile/scrcpy](https://github.com/Genymobile/scrcpy)
+
+Si vous avez quelques euros à perdre, voici mes préférés :
+
+* **10 Seconds Ninja** : [https://store.steampowered.com/app/271670/](https://store.steampowered.com/app/271670/)
+* **Stealth Bastard** : [https://store.steampowered.com/app/209190/](https://store.steampowered.com/app/209190/)
+
+Pour la démonstration, je vous invite à tester sur *scrcpy* : cela montre que votre code fonctionne pour tous les jeux mobiles Android.
+Mais pour pratiquer, je vous conseille de tester sur un de vos jeux ou sur l’un de ceux listés ci-dessus.
+
+Allons automatiser du code Android depuis Unity3D 🔮🪄
 
 
-https://store.steampowered.com/app/366250/METAL_SLUG/?l=french
 
+Commençons par télécharger **ScratchToWarcraft** et **scrcpy**
+Download : [https://github.com/Genymobile/scrcpy/releases/tag/v3.2](https://github.com/Genymobile/scrcpy/releases/tag/v3.2)
 
+```bash
+# Je vous propose de stocker le projet Scratch dans un dossier Git
+mkdir "C:\Git"
+
+# Je vous propose de stocker le code scrcpy dans Exe pour le retrouver facilement
+mkdir "C:\Exe"
+
+# mkdir permet de créer un dossier et cd de se déplacer dans le système via la console
+cd "C:\Git"
+
+# Je clone le projet dans le dossier Git
+git clone https://github.com/EloiStree/2024_08_29_ScratchToWarcraft.git
+
+cd "C:\Exe"
+
+# J’ouvre la page web de scrcpy pour le télécharger
+start "" "https://github.com/Genymobile/scrcpy/releases"
+
+# J’ouvre le dossier où l’extraire (à adapter selon votre explorateur ou besoin)
+start "" ""
+
+# Tada
+```
 
 
 

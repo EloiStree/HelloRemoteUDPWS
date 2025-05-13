@@ -1128,15 +1128,30 @@ Vous devriez maintenant voir l ecran de votre telephone avec un resolution max d
 ![image](https://github.com/user-attachments/assets/065de691-71f2-4a5e-9ccf-15e84d930782)
 
 
-Maintenant, il nous faut lancer ScratchToWarcraft avec les noms d applications HelloADB:
-`C:\Git\2024_08_29_ScratchToWarcraft\PythonBridge\LaunchGame`
+Maintenant, il nous faut lancer ScratchToWarcraft avec les noms d applications `HelloADB` sur le port `7073`:
+`C:\Git\2024_08_29_ScratchToWarcraft\PythonBridge\LaunchGame\Launch_HelloADB.bat`
 ``` bash
 cd ..
-python IntegerToWarcraft.py "adb" 7073
+python IntegerToWarcraft.py "HelloADB" 7073
 pause 10
 ```
+![image](https://github.com/user-attachments/assets/525ef0ac-6ec4-48e0-88c5-85f87af46687)
 
 
+Cela veut dire que nous avons un Server UDP qui ecoute a des entiers en little endian associer a des touches qui seront injecter sur la fenetre ADB si vous les envoyer sur l ordinateur et le port 7073.
+
+Essayons avec un touche, un boutton, un axe et un joystick en Unity3D via une boite a outil que j utilise quand, je fais du prototype;
+``` 
+https://github.com/EloiStree/OpenUPM_TickCollection.git
+```
+![image](https://github.com/user-attachments/assets/9d035899-7405-4636-99ea-8c93d39a8192)
+
+
+
+
+
+
+ > I am here
 
 
 

@@ -775,12 +775,12 @@ namespace Eloi.HelloUDPWS {
 
 
 
-Essayons ces deux classes:
-![image](https://github.com/user-attachments/assets/2328758f-e44f-424d-a7ca-3ac0ec09a28e)
-Changeons le UnityEvent pour relayer en Runtime et Editor vers `SendIntegerAsUDP`
-![image](https://github.com/user-attachments/assets/71bf9e76-4ea9-4f8e-8169-6f3bd3a0cf30)
+Essayons ces deux classes:  
+![image](https://github.com/user-attachments/assets/2328758f-e44f-424d-a7ca-3ac0ec09a28e)  
+Changeons le UnityEvent pour relayer en Runtime et Editor vers `SendIntegerAsUDP`  
+![image](https://github.com/user-attachments/assets/71bf9e76-4ea9-4f8e-8169-6f3bd3a0cf30)  
 
-Et utiliser le menu contextuel pour declancher unr Bark ou un Dancer
+Et utiliser le menu contextuel pour declancher un Bark ou un Dancer
 ![image](https://github.com/user-attachments/assets/bf012be7-edba-459c-a396-5d9f379f7da5)
 Si votre server python de plus tot est allumer vous devrier avec un message dans le clipboard et un coller qui c est declanche ;)
 
@@ -800,7 +800,7 @@ Essayons:  `⌛+☕+🍕= 🪄🔮` .
 ![image](https://github.com/user-attachments/assets/96ea8419-430f-4940-9f4b-138de95d9951)
 ![image](https://github.com/user-attachments/assets/970ffaa8-0bb7-49ea-8a1e-de96ce8b31a9)
 
-Mais pour simplifier les transmissions, il nous faudrait un code qui permette d’envoyer un entier de manière statique via C#, et que le code que nous avons déjà développé puisse s’y abonner.
+Mais pour simplifier les transmissions, il nous faudrait un code qui permette d’envoyer un entier de manière statique via C# dans tout l'application, et que le code que nous avons déjà développé puisse s’y abonner.
 Cela nous éviterait d’avoir à dupliquer ce code sur tous nos objets.
 
 Nous allons donc créer une classe statique qui permet d’envoyer des entiers ou des chaînes de caractères à travers notre application.
@@ -1011,9 +1011,166 @@ def send_key_release(key):
 ```
 
 
+On est d'accord, ça va vite faire beaucoup de lignes de code.
+
+Je vous invite donc à vous inspirer du code suivant pour créer le vôtre :
+`HelloServerPostMessageClipboard.py`
+
+De mon côté, j’utilise un code pour mes projets qui s’appelle **ScratchToWarcraft**.
+Pour ne pas réinventer la roue, je vais l’utiliser :
+[https://github.com/EloiStree/2024_08_29_ScratchToWarcraft](https://github.com/EloiStree/2024_08_29_ScratchToWarcraft)
+
+Je vous propose plusieurs zones de test sur lesquelles `PostMessage` de Ctypes fonctionne :
+
+* [https://hordes.io](https://hordes.io) sur Firefox
+* World of Warcraft : [https://worldofwarcraft.blizzard.com/fr-fr/](https://worldofwarcraft.blizzard.com/fr-fr/)
+* Brawlhalla : [https://www.brawlhalla.com](https://www.brawlhalla.com) sur Steam
+* Votre téléphone avec : [https://github.com/Genymobile/scrcpy](https://github.com/Genymobile/scrcpy)
+
+Si vous avez quelques euros à perdre, voici mes préférés :
+
+* **10 Seconds Ninja** : [https://store.steampowered.com/app/271670/](https://store.steampowered.com/app/271670/)
+* **Stealth Bastard** : [https://store.steampowered.com/app/209190/](https://store.steampowered.com/app/209190/)
+
+Pour la démonstration, je vous invite à tester sur *scrcpy* : cela montre que votre code fonctionne pour tous les jeux mobiles Android.
+Mais pour pratiquer, je vous conseille de tester sur un de vos jeux ou sur l’un de ceux listés ci-dessus.
+
+Allons automatiser du code Android depuis Unity3D 🔮🪄
+
+
+
+Commençons par télécharger **ScratchToWarcraft** et **scrcpy**
+Download : [https://github.com/Genymobile/scrcpy/releases/tag/v3.2](https://github.com/Genymobile/scrcpy/releases/tag/v3.2)
+
+```bash
+# Je vous propose de stocker le projet Scratch dans un dossier Git
+mkdir "C:\Git"
+
+# Je vous propose de stocker le code scrcpy dans Exe pour le retrouver facilement
+mkdir "C:\Exe"
+
+# mkdir permet de créer un dossier et cd de se déplacer dans le système via la console
+cd "C:\Git"
+
+# Je clone le projet dans le dossier Git
+git clone https://github.com/EloiStree/2024_08_29_ScratchToWarcraft.git
+
+cd "C:\Exe"
+
+# J’ouvre la page web de scrcpy pour le télécharger
+start "" "https://github.com/Genymobile/scrcpy/releases"
+
+# J’ouvre le dossier où l’extraire (à adapter selon votre explorateur ou besoin)
+start "" ""
+
+# Tada
+```
+
+Avant d utiliser SCRCPY, je vais vous donner deux boites a outils pour plus tard
+- Une boite a outils de fichier bat pour interagir avec scrcpy
+  - https://github.com/EloiStree/2024_05_23_SCRCPYBatFiles
+- Une boite a outils pour installer un jeu android sur plusieurs telephone et Quest3 en meme temps.
+  - https://github.com/EloiStree/2025_01_12_BuildAndRunApkBroadcast.git
+
+``` bash
+git clone https://github.com/EloiStree/2024_05_23_SCRCPYBatFiles.git  BatFiles
+git clone https://github.com/EloiStree/2025_01_12_BuildAndRunApkBroadcast.git BroadcastAndRun
+# A cloner a coter de  `adb.exe` et `scrcpy.exe`
+```
+
+Comme nous allons travaillez avec Android, il va nous falloir donner plus de pouvoir a vos telephone Android, ou Quest3.
+Cela est possible en les passants Administrateur.
+- [Sur telephone Android =>](https://www.youtube.com/results?search_query=passer+en+mode+developer+android+sur+telephone)
+- [Sur Quest 3 =>](https://www.youtube.com/results?search_query=passer+en+mode+developer+android+sur+quest3) 
+
+Comme ca change avec le temps et le temps, je laisse soint au Youtuber professionnel de vous montrer la dernier maniere de faire pour passer developper.
+Je me fais une petit pizza pendant ce temps la 🍕🤗...
+
+-------------------------
+
+Si votre telephone est bien maintenant developpeur :), on va pouvoir s amuser.
+
+
+Essayons deja de faire un Hello World.
+
+
+Pour cela, il nous faudra un telephone brancher en USB.
+Un message Authoriser ce telephone devrait apparaitre.
+Accepter pour toujours ce telephone sur le PC
+
+Allez dans votre dossier  `scrcpy` `C:\Exe\scrcpy` telecharger precedemment.
+Et essayer cette command:
+```
+adb devices
+```
+
+![image](https://github.com/user-attachments/assets/9adc6d42-c1b9-434d-9ff5-a19d53b657f1)
+
+Si vous voyez ce message c est que;
+- votre telephone est en mode developpeur
+- vous avez authoriser le telephone
+- vous etes dans le dossier ou ce trouve adb.exe 😉
+![image](https://github.com/user-attachments/assets/d30d813f-42d1-4dda-a4e8-793a19b943d8)
+
+ADB ca veut dire Android debug bridge:
+Un pont qui permet de debugger vtore telephone android via USB (ou Wifi)
+
+Essayons cette command pour tester SCRCPY:
+```
+scrcpy.exe --keyboard=uhid --video-source=display --audio-source=output --no-audio --orientation=0 --max-size 1024 --max-fps 10 --window-title "HelloADB"
+``` 
+``` bash
+# Si vous etes sur Quest3
+scrcpy.exe --crop 1920:1920:0:0 --keyboard=uhid --video-source=display --audio-source=output --no-audio --orientation=0 --max-size 1024 --max-fps 20 --window-title "HelloADB"
+```
+
+Vous devriez maintenant voir l ecran de votre telephone avec un resolution max de 1024 et un frame rate de 10 sans l audio et vous pouvez utiliser un clavier sur la fenetre donnee. Magic !!! 
+![image](https://github.com/user-attachments/assets/065de691-71f2-4a5e-9ccf-15e84d930782)
+
+
+Maintenant, il nous faut lancer ScratchToWarcraft avec les noms d applications `HelloADB` sur le port `7073`:
+`C:\Git\2024_08_29_ScratchToWarcraft\PythonBridge\LaunchGame\Launch_HelloADB.bat`
+``` bash
+cd ..
+python IntegerToWarcraft.py "HelloADB" 7073
+pause 10
+```
+![image](https://github.com/user-attachments/assets/525ef0ac-6ec4-48e0-88c5-85f87af46687)
+
+
+Cela veut dire que nous avons un Server UDP qui ecoute a des entiers en little endian associer a des touches qui seront injecter sur la fenetre ADB si vous les envoyer sur l ordinateur et le port 7073.
+
+Essayons avec un touche, un boutton, un axe et un joystick en Unity3D via une boite a outil que j utilise quand, je fais du prototype;
+``` 
+https://github.com/EloiStree/OpenUPM_TickCollection.git
+```
+![image](https://github.com/user-attachments/assets/9d035899-7405-4636-99ea-8c93d39a8192)
+
+
+
+
+
+
+ > I am here
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 ==============
-Note: https://github.com/EloiStree/HelloInput/issues/28
+
+- Note: https://github.com/EloiStree/HelloInput/issues/28
+- Meross: https://github.com/EloiStree/2024_12_13_IntegerToMerossFromPython/tree/main
+- Govee: https://github.com/EloiStree/2025_03_19_IntegerToGoveeFromPython
+  - https://github.com/EloiStree/2025_01_26_XboxAndKeyboardOnPiToInteger

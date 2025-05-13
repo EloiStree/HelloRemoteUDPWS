@@ -1174,3 +1174,5 @@ https://github.com/EloiStree/OpenUPM_TickCollection.git
 - Meross: https://github.com/EloiStree/2024_12_13_IntegerToMerossFromPython/tree/main
 - Govee: https://github.com/EloiStree/2025_03_19_IntegerToGoveeFromPython
   - https://github.com/EloiStree/2025_01_26_XboxAndKeyboardOnPiToInteger
+- https://github.com/EloiStree/OpenUPM_PushGenericIID
+- https://github.com/EloiStree/OpenUPM_BasicActionIID

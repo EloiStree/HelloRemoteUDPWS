@@ -1,0 +1,1 @@
+Read the documentation to configure the app. You can drop here some integer to action

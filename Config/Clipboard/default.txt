@@ -1,0 +1,1 @@
+Add here file int.int2clipboard or alias.int2clipboard with integer in it

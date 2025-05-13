@@ -1,5 +1,6 @@
 # Importons une bibliothèque pour compresser des données en binaire : struct
 import struct
+import sys
 # Importons une bibliothèque pour copier/coller du texte : pyperclip
 import pyperclip
 # Importons une bibliothèque pour simuler des frappes clavier : pyautogui
@@ -22,7 +23,18 @@ ipv4_mask= "0.0.0.0"
 # Definissons une touche a utiliser pour ouvrir le chat dans World of Warcraft
 string_key_for_wow_chat = "enter"
 hexadecimal_key_for_wow_chat = 0x0D
-windows_to_target = "World of Warcraft"
+windows_to_target = "World of Warcraft" #V
+windows_to_target = 'Hordes.io'#V on firefox
+windows_to_target = 'QUEST LITE' #V
+windows_to_target = '- Remote Desktop - RustDesk' #X
+windows_to_target = 'Shadow PC - Display' #X
+windows_to_target = '10 Second Ninja' #V
+windows_to_target = '- Cookie Clicker' #X Firefox
+windows_to_target = 'scrcpy.exe' #X Ne fonctionne pas car une sous fenetre avec les nom de l appareil est cree.
+windows_to_target = 'Brawlhalla' #V  https://www.brawlhalla.com
+windows_to_target = 'Metal Slug: Awakening' # Vhttps://store.steampowered.com/app/2963870/Metal_Slug_Awakening/
+# Note que vous pouvez proablement renommer la fenetre avec un paramettre de scrcpy pour avoir toujour la meme fenetre
+
 
 # Use to send key press or release event
 WM_KEYDOWN = 0x0100
@@ -31,12 +43,24 @@ WM_KEYUP = 0x0101
 # https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
 VK_CONTROL = 0x11
 VK_V = 0x56
+VK_X = 0x58
+VK_A = 0x41
 VK_ENTER = 0x0D
 VK_BACKSPACE = 0x08
+VK_SPACE = 0x20
 
+
+
+# Si il y a des paramètres de la ligne de commande
+if len(sys.argv) > 1:
+    # Si une personne lance le programme avec un parametre
+    # C est qu il a un tittre en tete a tester
+    windows_to_target = sys.argv[1]
+    print(f"Target window title: {windows_to_target}")
 
 # Stockons les handles des fenetres a cibler 
 target_windows=[]
+
 
 # Fonction pour obtenir les handles des fenêtres par le titre donné
 def get_windows_by_title(title):
@@ -44,8 +68,31 @@ def get_windows_by_title(title):
     win32gui.EnumWindows(lambda hwnd, _: windows.append((hwnd, win32gui.GetWindowText(hwnd))), None)
     return [hwnd for hwnd, window_title in windows if title.lower() in window_title.lower()]
 
+def get_windows_by_executable_name(executable_name):
+    windows = []
+    win32gui.EnumWindows(lambda hwnd, _: windows.append((hwnd, win32gui.GetWindowText(hwnd))), None)
+    return [hwnd for hwnd, window_title in windows if executable_name.lower() in window_title.lower()]
+
 # Fonction pour obtenir le handle de la fenêtre quand le script est lancé
-target_windows = get_windows_by_title(windows_to_target)
+target_windows = get_windows_by_executable_name(windows_to_target)
+target_windows += get_windows_by_title(windows_to_target)
+
+# Retirons les doublons sur le handle id
+target_windows = list({hwnd: None for hwnd in target_windows}.keys())
+
+if len(target_windows) > 0:
+    print(f"Fenêtres trouvées avec le titre '{windows_to_target}':")
+    # Display handle , title and executable name
+    handles = []
+    for hwnd in target_windows:
+        title = win32gui.GetWindowText(hwnd)
+        executable_name = win32gui.GetClassName(hwnd)
+        handles.append((hwnd, title, executable_name))
+        print(f"Handle: {hwnd}, Title: {title}, Executable Name: {executable_name}")
+
+else :
+    print(f"Aucune fenêtre trouvée avec le titre '{windows_to_target}'.")
+
 
 
 # Nous permettons de simuler la pression de touches pour une fenêtre spécifique
@@ -84,9 +131,6 @@ def send_key_click( key):
             return
         press_and_release_key_hwnd(hwnd_main, key)
         
-
-
-
 # Definisions des temps d attente entre les actions pour faire un coller de texte
 # Les variables sont a ajuster selon la puissance de votre ordinateur et la vitesse de votre connexion
 time_before_opening_chat = 0.01
@@ -187,18 +231,16 @@ def coller_texte_du_presse_papier():
         #release ctrl
         send_key_release(VK_CONTROL)
 
-
-        # Utilisons ctypes pour simuler la combinaison de touches "ctrl + v"
-        # ctypes.windll.user32.keybd_event(0x11, 0, 0, 0)
-        # time.sleep(0.05)
-        # ctypes.windll.user32.keybd_event(0x56, 0, 0, 0)
-        # time.sleep(0.05)
-        # ctypes.windll.user32.keybd_event(0x56, 0, 2, 0)
-        # time.sleep(0.05)
-        # ctypes.windll.user32.keybd_event(0x11, 0, 2, 0)
-
     print("Texte collé depuis le presse-papier.")
 
+
+
+# For the test
+for i in range(1, 10):
+    send_key_press(VK_SPACE)
+    time.sleep(0.1)
+    send_key_release(VK_SPACE)
+    time.sleep(1)
 
 # Ecoutons continuellement les messages UDP sur le port donnee
 while True:

@@ -1,0 +1,18 @@
+{
+    "name": "be.elab.helloudpws.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:bda5657d17b902c4eb7361e5203bcf41"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

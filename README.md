@@ -1094,6 +1094,42 @@ Si votre telephone est bien maintenant developpeur :), on va pouvoir s amuser.
 Essayons deja de faire un Hello World.
 
 
+Pour cela, il nous faudra un telephone brancher en USB.
+Un message Authoriser ce telephone devrait apparaitre.
+Accepter pour toujours ce telephone sur le PC
+
+Allez dans votre dossier  `scrcpy` `C:\Exe\scrcpy` telecharger precedemment.
+Et essayer cette command:
+```
+adb devices
+```
+
+![image](https://github.com/user-attachments/assets/9adc6d42-c1b9-434d-9ff5-a19d53b657f1)
+
+Si vous voyez ce message c est que;
+- votre telephone est en mode developpeur
+- vous avez authoriser le telephone
+- vous etes dans le dossier ou ce trouve adb.exe 😉
+![image](https://github.com/user-attachments/assets/d30d813f-42d1-4dda-a4e8-793a19b943d8)
+
+ADB ca veut dire Android debug bridge:
+Un pont qui permet de debugger vtore telephone android via USB (ou Wifi)
+
+Essayons cette command pour tester SCRCPY:
+```
+scrcpy.exe --keyboard=uhid --video-source=display --audio-source=output --no-audio --orientation=0 --max-size 1024 --max-fps 10 --window-title "HelloWorld"
+``` 
+Vous devriez maintenant voir l ecran de votre telephone avec un resolution max de 1024 et un frame rate de 10 sans l audio et vous pouvez utiliser un clavier sur le la fenetre donnee. Magic !!! 
+![image](https://github.com/user-attachments/assets/065de691-71f2-4a5e-9ccf-15e84d930782)
+
+
+``` bash
+# Si vous etes sur Quest3
+scrcpy.exe --crop 1920:1920:0:0 --keyboard=uhid --video-source=display --audio-source=output --no-audio --orientation=0 --max-size 1024 --max-fps 20 
+```
+
+
+
 
 
 

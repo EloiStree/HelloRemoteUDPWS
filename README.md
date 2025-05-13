@@ -1117,16 +1117,31 @@ Un pont qui permet de debugger vtore telephone android via USB (ou Wifi)
 
 Essayons cette command pour tester SCRCPY:
 ```
-scrcpy.exe --keyboard=uhid --video-source=display --audio-source=output --no-audio --orientation=0 --max-size 1024 --max-fps 10 --window-title "HelloWorld"
+scrcpy.exe --keyboard=uhid --video-source=display --audio-source=output --no-audio --orientation=0 --max-size 1024 --max-fps 10 --window-title "HelloADB"
 ``` 
-Vous devriez maintenant voir l ecran de votre telephone avec un resolution max de 1024 et un frame rate de 10 sans l audio et vous pouvez utiliser un clavier sur le la fenetre donnee. Magic !!! 
+``` bash
+# Si vous etes sur Quest3
+scrcpy.exe --crop 1920:1920:0:0 --keyboard=uhid --video-source=display --audio-source=output --no-audio --orientation=0 --max-size 1024 --max-fps 20 --window-title "HelloADB"
+```
+
+Vous devriez maintenant voir l ecran de votre telephone avec un resolution max de 1024 et un frame rate de 10 sans l audio et vous pouvez utiliser un clavier sur la fenetre donnee. Magic !!! 
 ![image](https://github.com/user-attachments/assets/065de691-71f2-4a5e-9ccf-15e84d930782)
 
 
+Maintenant, il nous faut lancer ScratchToWarcraft avec les noms d applications HelloADB:
+`C:\Git\2024_08_29_ScratchToWarcraft\PythonBridge\LaunchGame`
 ``` bash
-# Si vous etes sur Quest3
-scrcpy.exe --crop 1920:1920:0:0 --keyboard=uhid --video-source=display --audio-source=output --no-audio --orientation=0 --max-size 1024 --max-fps 20 
+cd ..
+python IntegerToWarcraft.py "adb" 7073
+pause 10
 ```
+
+
+
+
+
+
+
 
 
 

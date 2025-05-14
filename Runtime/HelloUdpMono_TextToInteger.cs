@@ -79,6 +79,11 @@ namespace Eloi.HelloUDPWS {
             if (string.IsNullOrWhiteSpace(text))
                 return;
 
+            if (int.TryParse(text, out int integerValue))
+            {
+                m_onEventAsIntegerFound?.Invoke(integerValue);
+                
+            }
             foreach (TextToInteger textToInteger in m_listTextToInteger)
             {
                 if (textToInteger != null && textToInteger.m_text != null && textToInteger.m_text.Length > 0)

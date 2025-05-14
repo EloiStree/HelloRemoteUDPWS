@@ -18,9 +18,57 @@ namespace Eloi.HelloUDPWS {
         [SerializeField] // Pour que le designer puisse changer le port
         private int[] m_portsOfTarget = new int[] { 7005,7006,7007 };
 
+        [Tooltip("Port a qui envoyer les messages UDP 7005 par defaut")]
+        [SerializeField] // Pour que le designer puisse changer le port
+        private int m_settablePortOfTarget = 7074;
+
 
         public byte[] m_bytesPushed = new byte[0];
         public int m_integerPushed = 0;
+
+
+        public void SetTargetIpv4AndPort(string ipv4Address)
+        {
+            m_addressIpOfTarget = ipv4Address;
+            string[] parts = ipv4Address.Split(':');
+            if (parts.Length == 2)
+            {
+                m_addressIpOfTarget = parts[0];
+                if (int.TryParse(parts[1], out int port))
+                {
+                    m_settablePortOfTarget = port;
+                }
+            }
+            else { 
+            
+                string[] ipPart = ipv4Address.Split(".");
+                if (ipPart.Length == 4)
+                {
+                    m_addressIpOfTarget = ipPart[0] + "." + ipPart[1] + "." + ipPart[2] + "." + ipPart[3];
+                }
+            }
+        }
+        public void SetSettablePort(int port)
+        {
+            m_settablePortOfTarget = port;
+        }
+        public void GetSettablePort(out int port)
+        {
+            port = m_settablePortOfTarget;
+        }
+        public void GetTargetIpv4WithoutPort(out string ip)
+        {
+            ip = m_addressIpOfTarget;
+        }
+        public void GetTargetIpv4AndPort(out string ip, out int port)
+        {
+            ip = m_addressIpOfTarget;
+            port = m_settablePortOfTarget;
+        }
+        public void SetTargetIpv4WithoutPort(string ip)
+        {
+            m_addressIpOfTarget = ip;
+        }
 
         /// <summary>
         ///  Ce code enverra le message sous format de bytes en UDP a la cible du script
@@ -28,6 +76,7 @@ namespace Eloi.HelloUDPWS {
         /// <param name="bytesArrayToPush"></param>
         public void PushBytesToTarget(byte[] bytesArrayToPush)
         {
+            try { 
             m_bytesPushed = bytesArrayToPush;
             using (var udpClient = new System.Net.Sockets.UdpClient())
             {
@@ -35,6 +84,12 @@ namespace Eloi.HelloUDPWS {
                 {
                     udpClient.Send(bytesArrayToPush, bytesArrayToPush.Length, m_addressIpOfTarget, port);
                 }
+                udpClient.Send(bytesArrayToPush, bytesArrayToPush.Length, m_addressIpOfTarget, m_settablePortOfTarget);
+            }
+            }
+            catch (Exception e)
+            {
+
             }
         }
 

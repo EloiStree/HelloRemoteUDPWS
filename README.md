@@ -1184,8 +1184,19 @@ On peut se servir du Stream Deck que l on construit poru piloter un jeu.
 
 
 
+- On va utiliser c est deux packages pour fabriquer un drone:
+  - https://github.com/EloiStree/2024_08_26_WowMovingInUnity
+  - https://github.com/EloiStree/2025_04_15_KidToyOvniCode
+  - https://github.com/EloiStree/2024_08_05_UvDrawableDrones
+- Mais on va le rendre compatible World of Warcraft pour pouvoir reutiliser le code de celui-ci.
 
+Si vous desirez faire un parcours:
+- https://github.com/EloiStree/2024_09_03_SkyRidingPath
+- https://github.com/EloiStree/2024_06_31_DroneRaceStep
+- https://github.com/EloiStree/2023_02_16_DroneSoccerGoal
 
+Et que vite fait, faire que la camera vous suive;
+- https://github.com/EloiStree/2024_09_16_QuickFollowIt
 
 
 

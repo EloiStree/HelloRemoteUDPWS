@@ -1151,7 +1151,32 @@ https://github.com/EloiStree/OpenUPM_TickCollection.git
 
 
 
- > I am here
+# Hummm... it works but..
+
+Apparemment, oui, cela fonction d envoyer de fausse touche a ScrCpy... Mais pas autant que ADB, PyAutoGUI dans la fenetre, du BLE avec un ESP32
+On va garder nos connaissances de SCRCPY et Android pour la suite sur le cours de Quest3 et Android.
+C est en creant se cours que je m en suis apercu. 
+
+Essayons autre choses.
+
+Dans la piece du cours, se trouve des lampe Govee and des prises Meross.
+Si le reseau securiser de la formation, ne nous bloque pas.
+Essayons de les attendres avec du Python et de les controllers depuis votre telephone.
+
+...
+
+Et c est Meross et Govee qui decide de me saboter mon cours ^^. 
+Quand ca marche, ca marche, mais quand ca fonctionne pas... Vous avez envie de tout bruller.
+![image](https://github.com/user-attachments/assets/39f25ba1-7143-45b4-bada-34e7aa666add)
+
+
+# On, va bouger un OVNI 🛸
+
+La convention Scratch 2 Warcraft n est qu une convention.
+
+On peut se servir du Stream Deck que l on construit poru piloter un jeu.
+
+
 
 
 
@@ -1171,7 +1196,7 @@ https://github.com/EloiStree/OpenUPM_TickCollection.git
 ==============
 
 - Note: https://github.com/EloiStree/HelloInput/issues/28
-- Meross: https://github.com/EloiStree/2024_12_13_IntegerToMerossFromPython/tree/main
+- Meross: https://github.com/EloiStree/2024_12_13_IntegerToMerossFromPython
 - Govee: https://github.com/EloiStree/2025_03_19_IntegerToGoveeFromPython
   - https://github.com/EloiStree/2025_01_26_XboxAndKeyboardOnPiToInteger
 - https://github.com/EloiStree/OpenUPM_PushGenericIID

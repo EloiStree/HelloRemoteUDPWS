@@ -15,6 +15,8 @@ Step by step:
 - [ ] Tabulation et attaque avec PostMessage
   - [ ] https://youtu.be/is2D6lrHYQE
 - [ ] C est quoi un server d entier en UDP avec python
-  - [ ] 
+  - [ ] https://youtu.be/-ITNsLWRTXc
 - [ ] C est quoi un client d entier en UDP avec python
+  - [ ] https://youtu.be/OlBsbvzZOnk
+- [ ] Ajoutons la carte et le deplacement sur notre server
   - [ ] 

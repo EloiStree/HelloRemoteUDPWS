@@ -9,4 +9,7 @@ Step by step:
   - [ ] https://youtu.be/PFDzg7kq8Tk
 - [ ] Tabulation et attaque avec Python
   - [ ] https://youtu.be/RRVgs3wvVFU
-
+- [ ] C est quoi des touches virtuelles sur Windows
+  - [ ]  https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
+- [ ] Tabulation et attaque avec PostMessage
+  - [ ] 

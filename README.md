@@ -7,7 +7,11 @@ Des outils utilent lies au projet:
 - Hello Remote: https://github.com/EloiStree/HelloRemoteUDPWS.git
 
 ```
-
+ "be.elab.helloremoteudpws": "https://github.com/EloiStree/HelloRemoteUDPWS.git",
+    "be.elab.primitiverelay": "https://github.com/EloiStree/2025_04_02_FacadePrimitiveValueRelay.git",
+    "be.elab.pushgenericintegerdate": "https://github.com/EloiStree/OpenUPM_PushGenericIID.git",
+    "be.elab.tickcollection": "https://github.com/EloiStree/OpenUPM_TickCollection.git",
+    "be.elab.udpthreadsender": "https://github.com/EloiStree/2020_11_29_UDPThreadSender.git",
 ```
 
 

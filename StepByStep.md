@@ -18,5 +18,10 @@ Step by step:
   - [ ] https://youtu.be/-ITNsLWRTXc
 - [ ] C est quoi un client d entier en UDP avec python
   - [ ] https://youtu.be/OlBsbvzZOnk
-- [ ] Ajoutons la carte et le deplacement sur notre server
+- [ ] Ajoutons le deplacement sur notre server et un systeme de macro
+  - [ ] https://youtu.be/Bn7Q6wEQBwU
+- [ ] Sauvons notre code sur GitHub
   - [ ] 
+- [ ] Prenons le temps d aller sur Unity3D
+  - [ ]  
+

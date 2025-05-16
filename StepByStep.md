@@ -7,5 +7,6 @@ Step by step:
   - [ ] https://youtu.be/7e17qbb1zBs
 - [ ] Installons Python pour simuler des touches
   - [ ] https://youtu.be/PFDzg7kq8Tk
-- [ ] Tabulation et attaque avec Python 
+- [ ] Tabulation et attaque avec Python
+  - [ ] https://youtu.be/RRVgs3wvVFU
 

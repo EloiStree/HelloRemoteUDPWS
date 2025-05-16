@@ -66,6 +66,8 @@ ipv4_mask = "0.0.0.0"
 # Définissons une touche à utiliser pour ouvrir le chat dans World of Warcraft
 string_key_for_wow_chat = "enter"
 hexadecimal_key_for_wow_chat = 0x0D
+
+windows_to_target = "World of Warcraft"
 windows_to_target = "Hordes"
 
 # Utilisé pour envoyer des événements de pression ou de relâchement de touche

@@ -11,5 +11,6 @@ Step by step:
   - [ ] https://youtu.be/RRVgs3wvVFU
 - [ ] C est quoi des touches virtuelles sur Windows
   - [ ]  https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
+  - [ ]  https://youtu.be/fTqOJ496uLc
 - [ ] Tabulation et attaque avec PostMessage
   - [ ] 

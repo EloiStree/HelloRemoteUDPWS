@@ -6,4 +6,5 @@ Step by step:
 - [ ] C est quoi Hordes ?
   - [ ] https://youtu.be/7e17qbb1zBs
 - [ ] Installons Python pour simuler des touches
+  - [ ] https://youtu.be/PFDzg7kq8Tk
 

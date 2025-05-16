@@ -557,7 +557,7 @@ Maintenant, créons un script pour Unity que vous pouvez déposer sur un objet v
 
 Son but est de pouvoir envoyer des entiers vers un ordinateur cible ou plusieurs applications.
 
-``` csharpharp
+``` csharp
 using System;
 using System.Text;
 using UnityEngine;
@@ -830,7 +830,7 @@ Nous allons donc créer une classe statique qui permet d’envoyer des entiers o
 
 
 
-``` csharpharp
+``` csharp
 
 using UnityEngine;
 

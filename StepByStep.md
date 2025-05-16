@@ -13,4 +13,8 @@ Step by step:
   - [ ]  https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
   - [ ]  https://youtu.be/fTqOJ496uLc
 - [ ] Tabulation et attaque avec PostMessage
+  - [ ] https://youtu.be/is2D6lrHYQE
+- [ ] C est quoi un server d entier en UDP avec python
+  - [ ] 
+- [ ] C est quoi un client d entier en UDP avec python
   - [ ] 

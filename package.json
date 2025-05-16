@@ -1,0 +1,29 @@
+
+{                                                                                
+  "name": "be.elab.helloremoteudpws",                              
+  "displayName": "Hello Remote UDP WS",                        
+  "version": "0.0.1",                         
+  "unity": "2018.1",                             
+  "unityRelease": "",                             
+  "description": "Tutorial on what is a udp and websocket in python and C#",                         
+  "keywords": ["Script","Tool"],                       
+  "dependencies":{},     
+  "relatedPackages":{},     
+  "samples": [
+    {
+      "displayName": "Demo Scene",
+      "description": "Demo on how to use the package",
+      "path": "Scene/Demo"
+    }
+  ] ,     
+  "author" : {
+"name":"",
+"mail":"",
+"url":""},     
+  "repository":{
+"type":"Git",
+"url":"https://github.com/EloiStree/HelloRemoteUDPWS.git",
+"footprint":"",
+"revision":""},     
+  "category": "Script"                   
+} 

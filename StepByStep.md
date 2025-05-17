@@ -48,11 +48,8 @@
   - [ ] https://youtu.be/Lv49D7DwuBM
 - [ ] Mais du coup, on pourrait...
   - [ ] utiliser un clavier Bluetooth ?
-    - [ ]  To Do
   - [ ] utiliser une souris Bluetooth ?
-    - [ ]  To Do
-  - [ ]  utiliser une manette Bluetooth ?
-    - [ ]  To Do
+  - [ ] utiliser une manette Bluetooth ?
 
 
 

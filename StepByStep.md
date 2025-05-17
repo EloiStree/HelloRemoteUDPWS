@@ -29,5 +29,8 @@ Step by step:
 - [ ] Passons notre telephone en `Developpeur Mode`
   - [ ] https://youtu.be/MIyaftgWsXQ
 - [ ] Creons un context Menu qui envoi des entiers en UDP
+  - [ ] https://youtu.be/Z5JiRTODeEA
+- [ ] Poussons ajoutons l address IP de notre Android sur Unity
   - [ ] 
 - [ ] Poussons sur espace avec un UI Button de Unity3D
+  - [ ]

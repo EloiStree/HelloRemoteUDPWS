@@ -24,6 +24,6 @@ Step by step:
   - [ ] https://www.youtube.com/watch?v=kcVxyk2F_sU
 - [ ] Clipboard Int UDP Server Why not:`(v) (; ; ) (v)  ?`
   - [ ] https://youtu.be/lwuAHtNrTG0
-- [ ] Prenons le temps d aller sur Unity3D
+- [ ] Creons un projet de Quarantaine Android
   - [ ]  
 

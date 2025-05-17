@@ -47,12 +47,12 @@
 - * [ ] C est cool les UI mais on pourrait pas jouer au clavier ?
   - * [ ] 
 - * [ ] Mais du coup, on pourrait...
- - * [ ] utiliser un clavier Bluetooth ?
-   - * [ ] 
- - * [ ] utiliser une souris Bluetooth ?
-   - * [ ] 
-- * [ ]  utiliser une manette Bluetooth ?
-   - * [ ] 
+  - * [ ] utiliser un clavier Bluetooth ?
+    - * [ ] 
+  - * [ ] utiliser une souris Bluetooth ?
+    - * [ ] 
+  - * [ ]  utiliser une manette Bluetooth ?
+    - * [ ] 
 
 
 

@@ -26,4 +26,5 @@ Step by step:
   - [ ] https://youtu.be/lwuAHtNrTG0
 - [ ] Creons un projet de Quarantaine Android
   - [ ]  
-
+- [ ] Creons un code static pour broadcaster des entiers
+  - [ ] 

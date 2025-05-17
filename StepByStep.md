@@ -40,9 +40,9 @@
   * [ ] [https://youtu.be/TyXqU8Rb1D4](https://youtu.be/TyXqU8Rb1D4)
 * [ ] Testons si les coroutines fonctionnent avec des boutons dans Unity
   * [ ] [https://www.youtube.com/watch?v=HPB4Ity-7bo](https://www.youtube.com/watch?v=HPB4Ity-7bo)
-* [ ] Ca donne quoi sur le Quest 3 ?
-  * [ ] 
 * [ ] Permet de changer l address IPV4 a une cible unique ?
+  * [ ] 
+* [ ] Ca donne quoi sur le Quest 3 ?
   * [ ] 
 * [ ] Mais du coup, on pourrait pas utiliser une manette Bluetooth ?
   * [ ] 

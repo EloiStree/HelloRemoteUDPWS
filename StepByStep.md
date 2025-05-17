@@ -25,6 +25,8 @@ Step by step:
 - [ ] Clipboard Int UDP Server Why not:`(v) (; ; ) (v)  ?`
   - [ ] https://youtu.be/lwuAHtNrTG0
 - [ ] Creons un projet de Quarantaine Android
-  - [ ]  
+  - [ ]  https://youtu.be/FazgA5cjqrk
+- [ ] Passons notre telephone en `Developpeur Mode`
+  - [ ]
 - [ ] Creons un code static pour broadcaster des entiers
   - [ ] 

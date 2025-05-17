@@ -45,7 +45,7 @@
 - [ ] Ca donne quoi sur le Quest 3 ?
   - [ ] Redo later
 - [ ] C est cool les UI mais on pourrait pas jouer au clavier ?
-  - [ ]  To Do
+  - [ ] https://youtu.be/Lv49D7DwuBM
 - [ ] Mais du coup, on pourrait...
   - [ ] utiliser un clavier Bluetooth ?
     - [ ]  To Do

@@ -27,6 +27,7 @@ Step by step:
 - [ ] Creons un projet de Quarantaine Android
   - [ ]  https://youtu.be/FazgA5cjqrk  
 - [ ] Passons notre telephone en `Developpeur Mode`
-  - [ ]
-- [ ] Creons un code static pour broadcaster des entiers
+  - [ ] https://youtu.be/MIyaftgWsXQ
+- [ ] Creons un context Menu qui envoi des entiers en UDP
   - [ ] 
+- [ ] Poussons sur espace avec un UI Button de Unity3D

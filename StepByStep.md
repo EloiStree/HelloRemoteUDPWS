@@ -31,6 +31,6 @@ Step by step:
 - [ ] Creons un context Menu qui envoi des entiers en UDP
   - [ ] https://youtu.be/Z5JiRTODeEA
 - [ ] Poussons ajoutons l address IP de notre Android sur Unity
+  - [ ] https://youtu.be/Bm82lf1dmkY
+- [ ] Creons un prefab de button et de toggle pour faire des actions
   - [ ] 
-- [ ] Poussons sur espace avec un UI Button de Unity3D
-  - [ ]

@@ -6,7 +6,7 @@ import time
 
 
 ipv4_address = "127.0.0.1"
-int_port_listen = 7073
+int_port_to_sent_to = [7073,7005]
 
 int_index_player = 1
 
@@ -84,5 +84,7 @@ while True:
 
             bytes_little_endian = struct.pack("<ii",int_index_player, send_integer)
             socket_send = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-            socket_send.sendto(bytes_little_endian, (ipv4_address, int_port_listen))
+            for int_port in int_port_to_sent_to:
+                socket_send.sendto(bytes_little_endian, (ipv4_address, int_port))
+               
 

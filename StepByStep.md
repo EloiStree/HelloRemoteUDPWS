@@ -46,10 +46,13 @@
   - [ ] Redo later
 - [ ] C est cool les UI mais on pourrait pas jouer au clavier ?
   - [ ] https://youtu.be/Lv49D7DwuBM
+- [ ] Comment je partage mon code a un amis ?
+  - [ ] 
 - [ ] Mais du coup, on pourrait...
   - [ ] utiliser un clavier Bluetooth ?
   - [ ] utiliser une souris Bluetooth ?
   - [ ] utiliser une manette Bluetooth ?
+        
 
 
 

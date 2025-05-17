@@ -33,4 +33,7 @@ Step by step:
 - [ ] Poussons ajoutons l address IP de notre Android sur Unity
   - [ ] https://youtu.be/Bm82lf1dmkY
 - [ ] Creons un prefab de button et de toggle pour faire des actions
+  - [ ] https://youtu.be/Wd_7_mLwjiE
+- [ ] Creons un enumerateur d entier pour des jeux types hordes and wow
   - [ ] 
+

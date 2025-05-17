@@ -43,9 +43,16 @@
 * [ ] Permet de changer l address IPV4 a une cible unique ?
   * [ ] https://youtu.be/GfTxlAUXGbs
 * [ ] Ca donne quoi sur le Quest 3 ?
+  * [ ] Redo later
+* [ ] C est cool les UI mais on pourrait pas jouer au clavier ?
   * [ ] 
-* [ ] Mais du coup, on pourrait pas utiliser une manette Bluetooth ?
-  * [ ] 
+* [ ] Mais du coup, on pourrait...
+ * [ ] utiliser un clavier Bluetooth ?
+   * [ ] 
+ * [ ] utiliser une souris Bluetooth ?
+   * [ ] 
+* [ ]  utiliser une manette Bluetooth ?
+   * [ ] 
 
 
 

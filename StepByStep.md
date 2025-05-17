@@ -45,3 +45,5 @@
 
 **N’oubliez pas que savoir envoyer des entiers en UDP ne sert pas seulement à faire bouger des personnages dans des jeux, mais est utile à toute l’industrie.**
 [![image](https://github.com/user-attachments/assets/26735502-39a3-4d24-a397-fb631bfe42e6)](https://youtu.be/ZEir102PxJ8?t=484)
+
+[Je vous invite à apprendre ce qu'est un relais ainsi qu'une API Meross et Govee.](https://www.google.com/search?q=meross+govee+and+relay+arduino)

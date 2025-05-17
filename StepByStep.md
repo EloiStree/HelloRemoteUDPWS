@@ -21,7 +21,8 @@ Step by step:
 - [ ] Ajoutons le deplacement sur notre server et un systeme de macro
   - [ ] https://youtu.be/Bn7Q6wEQBwU
 - [ ] Sauvons notre code sur GitHub
-  - [ ] 
+  - [ ] https://www.youtube.com/watch?v=kcVxyk2F_sU
+- [ ] Clipboard Int UDP Server Why not:`(v) (; ; ) (v)  ?`
 - [ ] Prenons le temps d aller sur Unity3D
   - [ ]  
 

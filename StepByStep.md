@@ -3,6 +3,7 @@
 
 ### Étapes pas à pas :
 
+Python:
 - [ ] Introduction à l’atelier
   - [ ] [https://youtu.be/1q5pvgJIteY](https://youtu.be/1q5pvgJIteY)
 - [ ] Qu’est-ce que Hordes ?
@@ -26,6 +27,8 @@
   - [ ] [https://www.youtube.com/watch?v=kcVxyk2F\_sU](https://www.youtube.com/watch?v=kcVxyk2F_sU)
 - [ ] Clipboard + Serveur UDP — Pourquoi pas : `(v) (; ; ) (v)` ?
   - [ ] [https://youtu.be/lwuAHtNrTG0](https://youtu.be/lwuAHtNrTG0)
+
+Unity 3D:
 - [ ] Créons un projet de Quarantaine Android
   - [ ] [https://youtu.be/FazgA5cjqrk](https://youtu.be/FazgA5cjqrk)
 - [ ] Passons notre téléphone en **mode développeur**

@@ -43,7 +43,7 @@
 - [ ] Permet de changer l address IPV4 a une cible unique ?
   - [ ] https://youtu.be/GfTxlAUXGbs
 - [ ] Ca donne quoi sur le Quest 3 ?
-  - [ ] Redo later
+  - [ ] https://youtu.be/G3jHpECRS60
 - [ ] C est cool les UI mais on pourrait pas jouer au clavier ?
   - [ ] https://youtu.be/TDEXlQASpcM
 - [ ] Comment je partage mon code a un amis ?

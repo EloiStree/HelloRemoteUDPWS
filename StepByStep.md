@@ -45,7 +45,7 @@
 - [ ] Ca donne quoi sur le Quest 3 ?
   - [ ] Redo later
 - [ ] C est cool les UI mais on pourrait pas jouer au clavier ?
-  - [ ] https://youtu.be/Lv49D7DwuBM
+  - [ ] https://youtu.be/TDEXlQASpcM
 - [ ] Comment je partage mon code a un amis ?
   - [ ] https://youtu.be/KfV9UT45NwY
 - [ ] Mais du coup, on pourrait...

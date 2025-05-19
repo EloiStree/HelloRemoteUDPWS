@@ -1,5 +1,29 @@
 
 **Notre but dans cet atelier est de jouer à Hordes depuis notre téléphone Android.**
+- Via **Hordes.io*- (ou l'application choisie) :
+  - Builder sur **Android**
+  - Découvrir les **UI*- :
+    - Utiliser un **bouton**
+    - Utiliser un **toggle**
+    - Utiliser un **slider**
+  - Découvrir les **inputs*- :
+    - Utiliser un **InputActionReference*- :
+      - avec **TickMono**
+      - ou avec votre propre code
+    - Utiliser un **Input Button**
+    - Utiliser un **Input Axis**
+    - Utiliser un **Input Joystick**
+  - Builder sur le **Quest 3*- :
+    - Essayer de créer une **séquence d’actions*- avec une **coroutine**
+    - Essayer une **boucle activable*- avec une coroutine
+    - Si vous en avez, essayer le **Bluetooth*- :
+      - Utiliser une **manette**
+      - Utiliser un **clavier**
+      - Utiliser une **souris**
+  - Pas dans les exemples :
+    - Essayer d’afficher les **positions des doigts**
+    - Utiliser les doigts pour **déclencher des actions** sur le **Quest** et le **téléphone**
+
 
 ### Étapes pas à pas :
 

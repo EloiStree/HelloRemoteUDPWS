@@ -8,7 +8,8 @@
     - Utiliser un **slider**
   - Découvrir les **inputs** :
     - Utiliser un **InputActionReference** :
-      - avec **TickMono**
+      - avec [**TickMono**](https://github.com/EloiStree/OpenUPM_TickCollection)
+        - https://github.com/EloiStree/OpenUPM_TickCollection
       - ou avec votre propre code
     - Utiliser un **Input Button**
     - Utiliser un **Input Axis**

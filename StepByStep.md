@@ -82,7 +82,10 @@ Unity 3D:
   - [ ] utiliser une manette Bluetooth ?
         
 
-
+To Add:
+- [ ] Add On Screen joystick unity to gamepad
+- [ ] Add On Screen button unity to keyboard
+- [ ] To look at. How to create virtual gamepad and virtual button for the action system mapping. 
 
 ---
 

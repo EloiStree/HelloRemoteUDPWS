@@ -1,14 +1,23 @@
 
+
+
 Des outils utilent lies au projet:
-- Tick: https://github.com/EloiStree/OpenUPM_TickCollection
-- Relay: https://github.com/EloiStree/2025_04_02_FacadePrimitiveValueRelay
-- UDP: https://github.com/EloiStree/2020_11_29_UDPThreadSender
-- Hello Remote: https://github.com/EloiStree/HelloRemoteUDPWS
-- Generic Int: https://github.com/EloiStree/OpenUPM_PushGenericIID
+- Tick: https://github.com/EloiStree/OpenUPM_TickCollection.git
+- Relay: https://github.com/EloiStree/2025_04_02_FacadePrimitiveValueRelay.git
+- UDP: https://github.com/EloiStree/2020_11_29_UDPThreadSender.git
+- Generic Int: https://github.com/EloiStree/OpenUPM_PushGenericIID.git
+- Hello Remote: https://github.com/EloiStree/HelloRemoteUDPWS.git
 
 ```
-
+ "be.elab.helloremoteudpws": "https://github.com/EloiStree/HelloRemoteUDPWS.git",
+    "be.elab.primitiverelay": "https://github.com/EloiStree/2025_04_02_FacadePrimitiveValueRelay.git",
+    "be.elab.pushgenericintegerdate": "https://github.com/EloiStree/OpenUPM_PushGenericIID.git",
+    "be.elab.tickcollection": "https://github.com/EloiStree/OpenUPM_TickCollection.git",
+    "be.elab.udpthreadsender": "https://github.com/EloiStree/2020_11_29_UDPThreadSender.git",
 ```
+
+Scratch to Warcraft:
+- https://github.com/EloiStree/2024_08_29_ScratchToWarcraft
 
 
 ======================
@@ -548,7 +557,7 @@ Maintenant, créons un script pour Unity que vous pouvez déposer sur un objet v
 
 Son but est de pouvoir envoyer des entiers vers un ordinateur cible ou plusieurs applications.
 
-``` csharpharp
+``` csharp
 using System;
 using System.Text;
 using UnityEngine;
@@ -821,7 +830,7 @@ Nous allons donc créer une classe statique qui permet d’envoyer des entiers o
 
 
 
-``` csharpharp
+``` csharp
 
 using UnityEngine;
 
